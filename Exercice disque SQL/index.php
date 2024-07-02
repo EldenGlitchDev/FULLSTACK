@@ -6,7 +6,7 @@
 <body>
     <div class="container mt-3">
         <div class="row justify-content-center">
-            <div class="col-6 fs-3">Liste des disques</div><button type="button" class="btn btn-primary col-5" style="max-width: 240px" onclick='window.location="ajout_disc.php"'>Ajouter</button>
+            <div class="col-6 fs-3">Liste des disques</div><button type="button" class="btn btn-primary col-5" style="max-width: 240px" onclick='window.location="add_script.php"'>Ajouter</button>
         </div>
 
         <form method='GET' action='details.php' class='mt-3 row justify-content-center'>
