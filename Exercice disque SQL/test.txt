@@ -1,0 +1,33 @@
+<?php
+// Récupère les dimensions de l'image
+$image_path = 'path/to/image.jpg';
+$image_size = getimagesize($image_path);
+
+// Définit la taille maximale autorisée (en pixels)
+$max_width = 1024;
+$max_height = 768;
+
+// Vérifie si l'image dépasse la taille maximale
+if ($image_size[0] > $max_width || $image_size[1] > $max_height) {
+    echo "L'image est trop grande. La taille maximale autorisée est de $max_width x $max_height pixels.";
+    // Vous pouvez également redimensionner l'image ici si vous le souhaitez
+} else {
+    echo "L'image est dans les limites de taille autorisées.";
+}
+?>
+
+<?php
+// Récupère la taille du fichier image (en octets)
+$image_path = 'path/to/image.jpg';
+$image_size_bytes = filesize($image_path);
+
+// Définit la taille maximale autorisée (en octets)
+$max_size_bytes = 1024 * 1024; // 1 Mo
+
+// Vérifie si le fichier image dépasse la taille maximale
+if ($image_size_bytes > $max_size_bytes) {
+    echo "Le fichier image est trop volumineux. La taille maximale autorisée est de $max_size_bytes octets.";
+} else {
+    echo "Le fichier image est dans les limites de taille autorisées.";
+}
+?>
