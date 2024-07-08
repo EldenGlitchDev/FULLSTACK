@@ -53,7 +53,7 @@
 
 
   <button type="button" class="btn btn-primary">Ajouter</button>
-  <button type="button" class="btn btn-primary">Retour</button>
+  <a href="index.php"><button type="button" class="btn btn-primary">Retour</button></a>
 
 
 </form>

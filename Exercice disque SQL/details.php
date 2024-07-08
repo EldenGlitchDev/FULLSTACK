@@ -3,36 +3,40 @@
     require_once('header.php');
 ?>
 
-<div class=container>
+<?php
 
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+$stmt=$conn->prepare("SELECT * FROM disc d LEFT JOIN artist a ON d.artist_id = a.artist_id WHERE disc_id=?");
+            $stmt->execute(array($_GET['nodiscs']));
+            $result=$stmt->fetch();
+            $stock=$_GET['nodiscs'];
+?>
+
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    
+    <div class="col-6">
+      <h3>Titre : <?php echo $result['disc_title'];?></h3>
+      <p>Artiste : <?php echo $result['artist_name'];?></p>
+      <p>Année : <?php echo $result['disc_year'];?></p>
+      <p>Genre : <?php echo $result['disc_genre'];?></p>
+      <p>Label : <?php echo $result['disc_label'];?></p>
+      <p>Prix : <?php echo $result['disc_price'];?> euros</p>
+    </div>
+    <img src="img/<?php echo $result['disc_picture'];?>" class="img-fluid rounded-start col-6">
+
+<form action="update_form.php" method="GET" class="col-6 mt-5">
+  <button type="submit" name="modif" class="btn btn-primary" value="<?php echo $result['disc_id'];?>">Modifier</button>
 </form>
 
+<form action="delete_form" method="GET" class="col-6 mt-5">
+  <button type="submit" name="delete" class="btn btn-primary" value="<?php echo $resultat['disc_id'];?>">Supprimer</button>
+</form>
 
+<div class="col-6">
+  <a href="index.php"><button type="button" class="btn btn-primary">Retour</button></a>
+</div>
 
-
-
-
-
-
-
-
-
-
+</div>
 </div>
 
 

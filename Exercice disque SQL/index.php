@@ -6,7 +6,7 @@
 <body>
     <div class="container mt-3">
         <div class="row justify-content-center">
-            <div class="col-6 fs-3">Liste des disques</div><button type="button" class="btn btn-primary col-5" style="max-width: 240px" onclick='window.location="add_script.php"'>Ajouter</button>
+            <div class="col-6 fs-3">Liste des disques</div><button type="button" class="btn btn-primary col-5" style="max-width: 240px" onclick='window.location="add_form.php"'>Ajouter</button>
         </div>
 
         <form method='GET' action='details.php' class='mt-3 row justify-content-center'>
@@ -31,7 +31,7 @@
         <p class="card-text">Label : '.$row['disc_label'].'</p>
         <p class="card-text">Année : '.$row['disc_year'].'</p>
         <p class="card-text">Genre : '.$row['disc_genre'].'</p>
-        <button type="button" class="btn btn-primary">Détails</button>
+        <button type="submit" name="nodiscs" class="btn btn-primary" value='.$row['disc_id'].'>Détails</button>
       </div>
     </div>
   </div>
