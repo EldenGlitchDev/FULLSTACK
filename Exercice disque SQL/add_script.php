@@ -48,7 +48,7 @@ if(isset($FILES['ajoutimage'])){
     //définition du chemin de destination sécurisée (ça met un nom de chemin unique)
 
     $img_path=uniqid() . '_' . $name;
-    $destination='../../img/' . $image_path;
+    $destination='img/' . $image_path;
 
     //déplacement du fichier uploadé
 
@@ -62,19 +62,19 @@ if(isset($FILES['ajoutimage'])){
 
 $name=$_POST['addartist'];
 
-//INSERT un nom d'artiste s'il n'existe pas dans la base de donnée.
+//INSERT un nom d'artiste s'il n'existe pas dans la base de donnée
 
-$stmt=$conn->prepare("INSERT INTO artist (artist_name) SELECT (:artist) WHERE NOT EXISTS (SELECT * FROM artist WHERE artist_name=:artist;");//ne peut pas mettre values quand il y a un where
+$stmt=$dbh->prepare("INSERT INTO artist (artist_name) SELECT (:artist) WHERE NOT EXISTS (SELECT * FROM artist WHERE artist_name=:artist;");//ne peut pas mettre values quand il y a un where
 $stmt->blindValue(':artist', $name);
 $stmt->execute();
 
-/*$stmt = $conn->prepare("INSERT INTO artist (artist_name) VALUES (:artist) WHERE NOT EXISTS (SELECT 1 FROM artist WHERE artist_name = :artist)");
+/*$stmt = $dbh->prepare("INSERT INTO artist (artist_name) VALUES (:artist) WHERE NOT EXISTS (SELECT 1 FROM artist WHERE artist_name = :artist)");
 $stmt->bindValue(':artist', $name);
 $stmt->execute();*/ //A tester si les 3 lignes du dessus ne fonctionnent pas, problème entre le SELECT et le VALUE
 
-//recupère un id de l'artiste pour pouvoir le reutiliser apres dans insert de disc
+//recupère un id de l'artiste pour pouvoir le réutiliser après dans insert de disc
 
-$stmt=$conn->prepare("SELECT * FROM artist WHERE artist_name = :artist");
+$stmt=$dbh->prepare("SELECT * FROM artist WHERE artist_name = :artist");
 $stmt->bindValue(':artist', $name);
 $stmt->execute();
 
@@ -82,9 +82,9 @@ $stmt->execute();
 
 $artist_id=$stock->fetch()['artist_id'];
 
-//regarde si les données correspond a un disc deja rentrer
+//regarde si les données correspond à un disc déjà rentré
 
-$stmt=$conn->prepare("SELECT * FROM disc WHERE EXISTS (SELECT * FROM disc WHERE disc_title = :title AND disc_year = :year)");
+$stmt=$dbh->prepare("SELECT * FROM disc WHERE EXISTS (SELECT * FROM disc WHERE disc_title = :title AND disc_year = :year)");
 $stmt->bindValue(':title', $_POST['addtitle']);
 $stmt->bindValue(':year', $_POST['addyear']);
 $stmt->execute();
@@ -93,7 +93,7 @@ echo $disc_id;
 
 //fait l'insert si le disc n'a pas était trouvé 
 if($disc_id==null){
-$stmt=$conn->prepare("INSERT INTO disc(disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price, artist_id) VALUES (:title, :year, :picture, :label, :genre, :prix, :artist_id);");
+$stmt=$dbh->prepare("INSERT INTO disc(disc_title, disc_year, disc_picture, disc_label, disc_genre, disc_price, artist_id) VALUES (:title, :year, :picture, :label, :genre, :prix, :artist_id);");
 $stmt->bindValue(':title', $_POST['addtitle']);
 $stmt->bindValue(':year', $_POST['addyear']);
 $stmt->bindParam(':picture', $img_path);

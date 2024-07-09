@@ -29,7 +29,7 @@ $stmt=$conn->prepare("SELECT * FROM disc d LEFT JOIN artist a ON d.artist_id = a
 </form>
 
 <form action="delete_form" method="GET" class="col-6 mt-5">
-  <button type="submit" name="delete" class="btn btn-primary" value="<?php echo $resultat['disc_id'];?>">Supprimer</button>
+  <button type="submit" name="delete" class="btn btn-primary" value="<?php echo $result['disc_id'];?>">Supprimer</button>
 </form>
 
 <div class="col-6">
