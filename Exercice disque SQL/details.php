@@ -5,7 +5,7 @@
 
 <?php
 
-$stmt=$conn->prepare("SELECT * FROM disc d LEFT JOIN artist a ON d.artist_id = a.artist_id WHERE disc_id=?");
+$stmt=$dbh->prepare("SELECT * FROM disc d LEFT JOIN artist a ON d.artist_id = a.artist_id WHERE disc_id=?");
             $stmt->execute(array($_GET['nodiscs']));
             $result=$stmt->fetch();
             $stock=$_GET['nodiscs'];

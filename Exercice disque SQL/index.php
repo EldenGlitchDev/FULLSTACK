@@ -13,7 +13,7 @@
 
         <?php
         //recupère tous les disc dans la base de données
-            $stmt=$conn->prepare("SELECT * FROM disc d LEFT JOIN artist a ON d.artist_id = a.artist_id");
+            $stmt=$dbh->prepare("SELECT * FROM disc d LEFT JOIN artist a ON d.artist_id = a.artist_id");
             $stmt->execute();
             $result=$stmt->fetchAll();
 
