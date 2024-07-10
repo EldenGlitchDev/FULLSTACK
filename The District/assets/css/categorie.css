@@ -1,0 +1,155 @@
+body{
+    background-color: #29334B;
+
+}
+
+#boutonderoulant{
+    background-color: #E3A592;
+}
+
+.couleurbouton{
+    color: #E3A592;
+    font-size: 30px;
+    font-family:Georgia, serif;
+}
+
+#wrap{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie1{
+    display:block;
+    text-align:center;
+}
+
+#sandwichcat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie2{
+    display:block;
+    text-align: center;
+}
+
+#pizzacat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie3{
+    display:block;
+    text-align:center;
+}
+
+#pastacat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie4{
+    display:block;
+    text-align:center;
+}
+
+#brugercat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie5{
+    display:block;
+    text-align:center;
+}
+
+#asianfood{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie6{
+    display:block;
+    text-align:center;
+}
+
+#bandereaubas{
+    width: 558px;
+    height: 150px; 
+}
+
+#logogoogle{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoreddit{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoyoutube{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoinstagram{
+    width: 40px;
+    height: 40px;
+    
+}
+
+#logofacebook{
+    width: 40px;
+    height: 40px;
+    
+}
+
+#logotwitter{
+    width: 40px;
+    height: 40px;    
+}
+
+p{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:25px;
+    font-weight: bold;
+}
+
+.bprecsuiv{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    background-color: #62426D;
+    border-color: black;
+}
+
+#image{
+    width: 1320px;
+    height: 300px;
+    background-color: #111b31;
+}

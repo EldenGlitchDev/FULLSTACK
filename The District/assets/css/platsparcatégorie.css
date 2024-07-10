@@ -1,0 +1,94 @@
+body{
+    background-color: #29334B;
+
+}
+
+#boutonderoulant{
+    background-color: #E3A592;
+}
+
+.couleurbouton{
+    color: #E3A592;
+    font-size: 30px;
+    font-family:Georgia, serif;
+}
+
+#bandereaubas{
+    width: 558px;
+    height: 150px; 
+}
+
+#logogoogle{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoreddit{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoyoutube{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoinstagram{
+    width: 40px;
+    height: 40px;
+    
+}
+
+#logofacebook{
+    width: 40px;
+    height: 40px;
+    
+}
+
+#logotwitter{
+    width: 40px;
+    height: 40px;    
+}
+
+#image{
+    width: 1320px;
+    height: 300px;
+    background-color: #111b31;
+}
+
+.bprecsuiv{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    background-color: #62426D;
+    border-color: black;
+}
+
+#titre{
+    background-color: #62426D;
+    border:2px solid;
+    border-radius: 8px;
+    color:#E3A592;
+    font-family: Georgia, serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.cardscolor{
+    background-color: #360E44 ;
+}
+
+.txtcolor{
+    color:white;
+}
+
+/*position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+      object-fit: cover;
+      z-index: 1;*/

@@ -1,0 +1,235 @@
+body{
+    background-color: #29334B;
+
+}
+
+#boutonderoulant{
+    background-color: #E3A592;
+}
+
+.couleurbouton{
+    color: #E3A592;
+    font-size: 30px;
+    font-family:Georgia, serif;
+}
+
+#recherche{
+    position: relative;
+    top:260px;
+    left: 550px;
+    background-color:#62426D;
+    border:solid;
+    border:3px solid;
+    border-color: black;
+    color:#E3A592;
+    border-radius: 10px;
+}
+
+#video{
+    width: 1320px;
+    height: 300px;
+    background-color: #111b31;
+}
+
+#wrap{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+  
+}
+
+#categorie1{
+    display:block;
+    text-align:center;
+}
+
+#sandwichcat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie2{
+    display:block;
+    text-align: center;
+}
+
+#pizzacat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie3{
+    display:block;
+    text-align:center;
+}
+
+#pastacat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie4{
+    display:block;
+    text-align:center;
+}
+
+#brugercat{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie5{
+    display:block;
+    text-align:center;
+}
+
+#asianfood{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+}
+
+#categorie6{
+    display:block;
+    text-align:center;
+}
+
+#pizzamargarita{
+    width: 280px;
+    height: 180px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plat1{
+    display:block;
+    text-align:center;
+}
+
+#hamburger{
+    width: 280px;
+    height: 180px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plat2{
+    display:block;
+    text-align:center;
+}
+
+#spaghetti{
+    width: 280px;
+    height: 180px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plat3{
+    display:block;
+    text-align:center;
+}
+
+p{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:25px;
+    font-weight: bold;
+}
+
+#bandereaubas{
+    width: 558px;
+    height: 150px;
+    
+}
+
+#logogoogle{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoreddit{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoyoutube{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoinstagram{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logofacebook{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logotwitter{
+    width: 40px;
+    height: 40px;
+}
+
+.parallax{
+    background-image: url(../img/bunch-pasta-ingredients.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -50;
+    margin-top: 0%;
+}
+
+.animeimage{
+    transition: 0.5s ease;
+}
+
+.animeimage:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
+}
