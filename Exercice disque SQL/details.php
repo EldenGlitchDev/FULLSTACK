@@ -28,7 +28,7 @@ $stmt=$dbh->prepare("SELECT * FROM disc d LEFT JOIN artist a ON d.artist_id = a.
   <button type="submit" name="modif" class="btn btn-primary" value="<?php echo $result['disc_id'];?>">Modifier</button>
 </form>
 
-<form action="delete_form" method="GET" class="col-6 mt-5">
+<form action="delete_form.php" method="GET" class="col-6 mt-5">
   <button type="submit" name="delete" class="btn btn-primary" value="<?php echo $result['disc_id'];?>">Supprimer</button>
 </form>
 
