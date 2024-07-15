@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="shortcut icon" href="assets/img/the_district_brand/favicon.png">
 </head>
+
 <body>
     
     <div class="container">
@@ -16,11 +17,9 @@
     require_once('header.php')
   ?>
   
-        <div class="container-fluid">
-        <div class="row">
-          <img src="assets/img/bg1.jpeg" alt="bandereau" title="bandereau" id="image" class="col-6">
-          </div>
-          </div>
+  <?php
+    require_once('bandereau.php')
+  ?>
 
         <section class="container" id="background-img"><br>
     

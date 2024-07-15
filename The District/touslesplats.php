@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/platsparcatégorie.css">
     <link rel="shortcut icon" href="assets/img/the_district_brand/favicon.png">
 </head>
+
 <body>
   <div class="container">
     
@@ -15,120 +16,30 @@
     require_once('header.php')
   ?>
 
-  <div class="container-fluid">
-    <div class="row">
-      <img src="assets/img/bg1.jpeg" alt="bandereau" title="bandereau" id="image" class="col-6">
-      </div>
-      </div>
+<?php
+    require_once('bandereau.php')
+?>
 
 <br>
 
-<div class="container">
-    <div class="row justify-content-between g-0">
-                <div class="card mb-3" style="max-width: 580px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="assets/img/food/cheesburger.jpg" class="img-fluid rounded-start border border-dark border-4" alt="pizza-margherita">
-                      </div>
-                      <div class="col-md-8 cardscolor">
-                        <div class="card-body">
-                          <h5 class="card-title txtcolor">Cheesburger</h5>
-                          <p class="card-text txtcolor">Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooof ?</p>
-                            <div class="d-flex justify-content-end">
-                          <a href="#" class="btn btn-primary">Commander</a>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card mb-3" style="max-width: 580px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="assets/img/food/hamburger.jpg" class="img-fluid rounded-start border border-dark border-4" alt="pizza-salmon">
-                      </div>
-                      <div class="col-md-8 cardscolor">
-                        <div class="card-body">
-                          <h5 class="card-title txtcolor">Hamburger Bacon</h5>
-                          <p class="card-text txtcolor">Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooof ?</p>
-                          <div class="d-flex justify-content-end">
-                            <a href="#" class="btn btn-primary">Commander</a>
-                              </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    </div>
-</div>
+<?php
+    require_once('divplatsPHP.php')
+?>
 
 
+<?php
+    require_once('boutonsSuivPrec.php')
+?>
 
-<div class="container">
-    <div class="row justify-content-between g-0">
 
-
-  <div class="card mb-3" style="max-width: 580px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="assets/img/food/Food-Name-6340.jpg" class="img-fluid rounded-start border border-dark border-4" alt="pizzaPPO">
-    </div>
-    <div class="col-md-8 cardscolor">
-      <div class="card-body">
-        <h5 class="card-title txtcolor">Hamburger Steak</h5>
-        <p class="card-text txtcolor">Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooof ?</p>
-        <div class="d-flex justify-content-end">
-          <a href="#" class="btn btn-primary">Commander</a>
-            </div>
-      </div>
-    </div>
-  </div>
-</div>
   
-
-<div class="card mb-3" style="max-width: 580px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="assets/img/food/Food-Name-433.jpeg" class="img-fluid rounded-start border border-dark border-4" alt="pizzaVeggie">
-      </div>
-      <div class="col-md-8 cardscolor">
-        <div class="card-body">
-          <h5 class="card-title txtcolor">Big Mac</h5>
-          <p class="card-text txtcolor">Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooof ?</p>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-primary">Commander</a>
-              </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
-</div>
-
-
-
-
-
-<div class="row justify-content-between">
-    <button type="button" class="btn btn-secondary col-3 m-5 p-0 rounded-pill bprecsuiv">Précédent</button>
-    <button type="button" class="btn btn-secondary col-3 m-5 p-0 rounded-pill bprecsuiv">Suivant</button>
-    </div>
-    </div>
 
 <br><br>
 
 <?php
     require_once('footer.php')
 ?>
-
-
-
-
-
-
-
-
-
 
 
 

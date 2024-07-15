@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/commande.css">
     <link rel="shortcut icon" href="assets/img/the_district_brand/favicon.png">
 </head>
+
 <body>
     <div class="container">
 
