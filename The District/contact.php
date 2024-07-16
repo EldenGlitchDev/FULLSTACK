@@ -17,9 +17,6 @@
     require_once('header.php')
   ?>
   
-  <?php
-    require_once('bandereau.php')
-  ?>
 
         <section class="container" id="background-img"><br>
     

@@ -16,11 +16,6 @@
     require_once('header.php')
   ?>
 
-
-<?php
-    require_once('bandereau.php')
-?>
-
 <br>
 
 <?php
