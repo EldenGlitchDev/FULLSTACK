@@ -5,3 +5,68 @@
 .txtcolor{
     color:white;
 }
+
+body{
+    background-color: #29334B;
+}
+
+.couleurbouton{
+    color: #E3A592;
+    font-size: 30px;
+    font-family:Georgia, serif;
+}
+
+.bprecsuiv{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    background-color: #62426D;
+    border-color: black;
+}
+
+#logogoogle{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoreddit{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoyoutube{
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+#logoinstagram{
+    width: 40px;
+    height: 40px;
+    
+}
+
+#logofacebook{
+    width: 40px;
+    height: 40px;
+    
+}
+
+#logotwitter{
+    width: 40px;
+    height: 40px;    
+}
+
+#bandereaubas{
+    width: 558px;
+    height: 150px; 
+}
+
+#image{
+    width: 1320px;
+    height: 300px;
+}
