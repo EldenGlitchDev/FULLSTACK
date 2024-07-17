@@ -30,85 +30,6 @@ body{
     height: 300px;
 }
 
-#wrap{
-    width: 280px;
-    height: 280px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-  
-}
-
-#categorie1{
-    display:block;
-    text-align:center;
-}
-
-#sandwichcat{
-    width: 280px;
-    height: 280px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-}
-
-#categorie2{
-    display:block;
-    text-align: center;
-}
-
-#pizzacat{
-    width: 280px;
-    height: 280px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-}
-
-#categorie3{
-    display:block;
-    text-align:center;
-}
-
-#pastacat{
-    width: 280px;
-    height: 280px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-}
-
-#categorie4{
-    display:block;
-    text-align:center;
-}
-
-#brugercat{
-    width: 280px;
-    height: 280px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-}
-
-#categorie5{
-    display:block;
-    text-align:center;
-}
-
-#asianfood{
-    width: 280px;
-    height: 280px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-}
-
-#categorie6{
-    display:block;
-    text-align:center;
-}
-
 #pizzamargarita{
     width: 280px;
     height: 180px;
@@ -162,6 +83,7 @@ p{
     font-family: Georgia, serif;
     font-size:25px;
     font-weight: bold;
+    text-align: center;
 }
 
 #bandereaubas{
@@ -231,4 +153,20 @@ p{
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     transition: 1s ease;
+}
+
+.posImage{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+    border-color: rgb(0, 0, 0);
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    text-decoration: none;
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
@@ -30,4 +30,22 @@
     </button>
   </div>
 </div>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+    <div id="carouselPlats" class="carousel slide">
+      <div class="carousel-indicators">
+        <?php
+          $stmt=$dbh->prepare("SELECT")
+
+
+        ?>
+
+
+
+
+
+  </div>
 </div>
