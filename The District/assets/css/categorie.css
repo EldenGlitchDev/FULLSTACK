@@ -139,6 +139,7 @@ p{
     font-family: Georgia, serif;
     font-size:25px;
     font-weight: bold;
+    text-align: center;
 }
 
 .bprecsuiv{
@@ -151,4 +152,31 @@ p{
 #image{
     width: 1320px;
     height: 300px;
+}
+
+.posImage{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+    border-color: rgb(0, 0, 0);
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animeimage{
+    transition: 0.5s ease;
+}
+
+.animeimage:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+a{
+    text-decoration: none;
 }

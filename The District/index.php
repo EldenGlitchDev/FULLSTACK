@@ -25,7 +25,7 @@ $result=$stmt->fetchAll();
 <div class="container">
   <div class="row">
 
-<div class="backgroundTitle">
+<div class="backgroundTitle mb-3">
 <h1>Les catégories</h1>
 </div>
 
@@ -52,7 +52,7 @@ $result=$stmt->fetchAll();
 <div class="container">
           <div class="row">
 
-<div class="backgroundTitle">
+<div class="backgroundTitle mb-3">
 <h1>Les plats les plus vendus</h1>
 </div>
 
@@ -97,11 +97,6 @@ $result=$stmt->fetchAll();
 </div>
 
 <br>
-
-  <!--php
-  require_once('carouselIndex.php') /*CASSE POUR LE MOMENT*/
-  ?>-->
-
 
 </div>
 </div>
