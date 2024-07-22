@@ -1,0 +1,84 @@
+<?php
+    require_once('header.php')
+  ?>
+
+<div class="container">
+    <div class="row">
+<h1>Politique de confidentialité</h1>
+
+<h2>Introduction</h2>
+
+<p>Bienvenue sur le site de <b><i>The District</i></b>. La protection de vos données personnelles est une priorité pour nous. Cette politique de confidentialité explique quelles informations nous collections, comment nous les utilisons et les partageons, ainsi que vos droits concernants ces informations.</p>
+
+<h3>1. Informations collectées</h3>
+
+<p>Nous collections différents types d'informations, y compris :</p>
+<ul>
+    <li>Informations d'identification personnelles : Nom, adresse email, numéro de téléphone, adresse postale, etc...</li>
+    <li>Informations de réservation : Détails de vos réservations, préférences alimentaires, demandes, spéciales, etc...</li>
+    <li>Informations de paiement :  Détails de carte de crédit ou autres moyens de paiement pour traiter les transactions.</li>
+    <li>Informations techniques : Adresse IP, type de navigateur, pages visitées, durée de la visite, etc...</li>
+</ul>
+
+<h3>2. Utilisation des informations</h3>
+
+<p>Les informations que nous collectons sont utilisées pour :</p>
+<ul>
+    <li>Gérer vos réservations et commandes.</li>
+    <li>Améliorer notre service client.</li>
+    <li>Envoyer des communications marketing, si vous y avez consenti.</li>
+    <li>Analyser et améliorer notre site web et nos services.</li>
+    <li>Respecter nos obligations légales.</li>
+</ul>
+
+<h3>3. Partage des informations</h3>
+
+<p>Nous ne vendons ni ne louons vos informations personnelles à des tiers. Toutefois, nous pouvons partager vos informations avec :</p>
+<ul>
+    <li>Pretataires de services : Fournisseurs tiers qui nous aifent à exploiter notre site web, à traier les paiements, à livrer des commandes, etc...
+    </li>
+    <li>Autorités légales : Si la loi l'exige ou pour protéger nos droits
+    </li>
+</ul>
+
+<h3>4. Sécurité des données</h3>
+
+<p>Nous mettons en &#x0153;uvres des mesures de sécurité appropriées pour protéger vos informations personnelles contre l'accès non autorisé, la modification, la divulgation ou la destruction de vos données.</p>
+
+<h3>5. Vos droits</h3>
+
+<p>Vous avez le droit de :</p>
+<ul>
+    <li>Accéder à vos informations personnelles.</li>
+    <li>Modifier ou supprimer vos informations personnelles.</li>
+    <li>Obtenir une copie de vos informations personnelles.</li>
+    <li>Vous opposer au traitement de vos informations personnelles à des fins de marketing.</li>
+</ul>
+<p>Pour exercer ces droits, veuillez nous contacter à "thedistrict@laposte.fr"</p>
+
+<h3>6. Cookies</h3>
+
+<p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. Les cookies sont de petits fichiers texte stockés sur votre appareil. Vous pouvez configurer botre navigateur pour refuser les cookies mais cela peut affecter certaines fonctionnalités du site.</p>
+
+<h3>7. Modifications de la Politique de Confidentialité</h3>
+
+<p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page avec une date de mise à jour revisée.</p>
+
+<h3>8. Contact</h3>
+
+<p>Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter à :</p>
+<ul>
+    <li>The District</li>
+    <li>58, rue de Quelquepart, 75000, Paris</li>
+    <li>09/**/**/**/**</li>
+    <li>thedistrict@laposte.fr</li>
+</ul>
+
+<p>Date de mise à jour : 19 juillet 2024</p>
+
+    </div>
+</div>
+
+<?php
+    require_once('footer.php')
+?>

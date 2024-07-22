@@ -44,7 +44,12 @@ try {
     case '/commande.php':
       echo '<title>Commande</title>';
       break;
-
+    case '/politique_de_confidentialite.php';
+      echo '<title>Politique de confidentialité</title>';
+      break;
+    case '/mentions_legales.php';
+      echo '<title>Mentions légales</title>';
+      break;
 
     default:                        // Si l'URL actuelle ne correspond à aucune des URL spécifiées, le code du bloc par défaut sera exécuté, ce qui définit le titre sur "NoPage"
       echo '<title>NoPage</title>';
@@ -128,7 +133,7 @@ try {
     // in_array : indique si une valeur appatient à un tableau
     // isset : indique si une variable est déclarée et est différente de null
     // !!!!!!!! intégrer ['platcommande'] dans le 'execute' de la page commande' -> $GET_['platcommande'] !!!!!!!!!
-    elseif (!in_array($_SERVER['REQUEST_URI'], ["/commande.php", "/scriptformulairecommande.php"]) && !isset($_GET['platcommande'])) {
+    elseif (!in_array($_SERVER['REQUEST_URI'], ["/commande.php", "/scriptformulairecommande.php", "/politique_de_confidentialite.php", "/mentions_legales.php"]) && !isset($_GET['platcommande'])) {
       // afficher la banière image sur les autres pages hotmis la page de commande
       echo '<div class="container-fluid">
     <div class="row justify-content-center">

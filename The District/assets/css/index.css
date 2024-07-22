@@ -170,3 +170,14 @@ p{
 a{
     text-decoration: none;
 }
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color:#E3A592;
+    font-family: Georgia, serif;
+}
+
+.backgroundTitle{
+    background-color: black;
+}
