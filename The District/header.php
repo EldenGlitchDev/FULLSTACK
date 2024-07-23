@@ -50,6 +50,25 @@ try {
     case '/mentions_legales.php';
       echo '<title>Mentions légales</title>';
       break;
+    case '/platsparcategorie.php?catplat=4':
+      echo '<title>Pizzas</title>';
+      break;
+    case '/platsparcategorie.php?catplat=5':
+      echo '<title>Burgers</title>';
+      break;
+    case '/platsparcategorie.php?catplat=9':
+      echo '<title>Wraps</title>';
+      break;
+    case '/platsparcategorie.php?catplat=10':
+      echo '<title>Pastas</title>';
+      break;
+    case '/platsparcategorie.php?catplat=11':
+      echo '<title>Sandwiches</title>';
+      break;
+    case '/platsparcategorie.php?catplat=13':
+      echo '<title>Salades</title>';
+      break;
+
 
     default:                        // Si l'URL actuelle ne correspond à aucune des URL spécifiées, le code du bloc par défaut sera exécuté, ce qui définit le titre sur "NoPage"
       echo '<title>NoPage</title>';
@@ -74,13 +93,27 @@ try {
     case '/categorie.php':
       echo '<link rel="stylesheet" href="assets/css/categorie.css">';
       break;
-    case '/platsparcategorie.php':
-      echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
-      break;
     case '/commande.php':
       echo '<link rel="stylesheet" href="assets/css/commande.css">';
       break;
-
+    case '/platsparcategorie.php?catplat=4':
+        echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
+      break;
+    case '/platsparcategorie.php?catplat=5':
+        echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
+      break;
+    case '/platsparcategorie.php?catplat=9':
+        echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
+      break;
+    case '/platsparcategorie.php?catplat=10':
+        echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
+      break;
+    case '/platsparcategorie.php?catplat=11':
+        echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
+      break;
+    case '/platsparcategorie.php?catplat=13':
+        echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
+      break;
 
     default: // The default case is used to specify a fallback CSS stylesheet if the current URL does not match any of the specified URLs. In this case, it links to assets/css/index.css
       echo '<link rel="stylesheet" href="assets/css/index.css">';

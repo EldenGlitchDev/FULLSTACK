@@ -1,32 +1,5 @@
-<div class="container m-3">
-    <div class="row">
 
-<?php
-if(isset($_GET['numcat'])){ // Vérification si le paramètre 'numcat' est défini dans l'URL
-  // Préparation de la requête SQL pour récupérer les plats d'une catégorie spécifique
-  $stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.description, categorie.libelle AS nomcat, plat.id, id_categorie FROM plat LEFT JOIN categorie on plat.id_categorie=categorie.id WHERE id_categorie= :id ORDER BY categorie.libelle DESC");
-
-  // Liaison du paramètre :id avec la valeur de $_GET['numcat']
-  $stmt->bindParam(':id', $_GET['numcat']);
-} else {
-  
-}
-?>
-
-
-
-
-
-
-
-
-
-    <p class="col-6 col-lg-1" id="titre">Pizzas</p>
-</div>
-</div>
-
-
-<div class="container">
+<!--div class="container">
     <div class="row justify-content-between g-0">
                 <div class="card mb-3" style="max-width: 580px;">
                     <div class="row g-0">
@@ -106,4 +79,4 @@ if(isset($_GET['numcat'])){ // Vérification si le paramètre 'numcat' est défi
   </div>
 
 </div>
-</div>
+</div>-->

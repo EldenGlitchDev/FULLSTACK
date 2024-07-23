@@ -1,6 +1,6 @@
 <footer>
   <div class="container">
-    <div class="row">
+    <div class="row g-0 bg-dark">
 
     <div class="d-flex justify-content-center">
       <a class="col-1 mx-1" href="mentions_legales.php">Mentions légales</a>

@@ -1,5 +1,7 @@
 <div class="row">
 
+<form method='GET' action='platsparcategorie.php' class='mt-3 row justify-content-center'>
+
 <?php
 // récupère toutes les données de catégorie
 $stmt=$dbh->prepare("SELECT * FROM categorie WHERE active='Yes'");
@@ -21,7 +23,7 @@ $result=$stmt->fetchAll();
   $i=0;
         foreach($result as $row){
             echo '<div class="col-sm-12 col-lg-4">
-              <a href="platparcategorie.php?numcat='.$row['id'].'">
+              <a href="platsparcategorie.php">
                 <img src="assets/img/category/'.$row['image'].'"class="animeimage posImage" alt="'.$row['libelle'].'">
                 <p>'.$row['libelle'].'</p>
                 <div class="card-body">
@@ -36,4 +38,6 @@ $result=$stmt->fetchAll();
 
 ?>
 
+    </form>
+<!--?numcat='.$row['id'].'-->
 </div>

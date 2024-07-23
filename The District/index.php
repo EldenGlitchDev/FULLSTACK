@@ -103,7 +103,7 @@ $result=$stmt->fetchAll();
 
 
 
-<br>
+
 
 <?php
     require_once('footer.php')
