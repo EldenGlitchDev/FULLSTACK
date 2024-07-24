@@ -6,7 +6,7 @@ require_once('header.php')
 
   <div class="row">
 
-<!--<form method='GET' action='platsparcategorie.php' class='mt-3 row justify-content-center'>-->
+
 
 <?php
 // récupère toutes les données de catégorie
@@ -41,11 +41,9 @@ $result=$stmt->fetchAll();
                 break;
         }
       }
-
+/* ?catplat=' : Il s'agit du séparateur de chaîne de requête (?) suivi du nom du paramètre (catplat) et d'un signe égal (=). La valeur du paramètre sera ajoutée après le signe égal. */
 ?>
 
-    <!--</form>-->
-<!--?numcat='.$row['id'].'-->
 </div>
 
 

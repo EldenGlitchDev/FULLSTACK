@@ -46,7 +46,7 @@ $result=$stmt->fetchAll();
                 break;
         }
       }
-
+/* ?catplat= : Il s'agit d'un paramètre de chaîne de requête nommé comm. Le ? caractère sépare le nom du fichier de la chaîne de requête. */
 ?>
 
 <div class="container">
@@ -96,7 +96,7 @@ $result=$stmt->fetchAll();
               if($i==6){
                 break;
               }
-        }
+        } /* ?comm= : Il s'agit d'un paramètre de chaîne de requête nommé comm. Le ? caractère sépare le nom du fichier de la chaîne de requête. */
         ?>
           </div>
         </div>

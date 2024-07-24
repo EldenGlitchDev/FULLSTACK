@@ -13,13 +13,18 @@
                             FROM plat LEFT JOIN categorie ON plat.id_categorie=categorie.id 
                                 WHERE plat.id= :id ORDER BY categorie.libelle DESC");
   try{
-    $stmt->execute(array(':id' => $_GET['comm']));
+    $stmt->execute(array(':id' => $_GET['comm'])); /* $stmt est un objet PDOStatement, qui représente une instruction SQL préparée.
+    execute() est une méthode de l'objet PDOStatement qui exécute l'instruction préparée.
+    Le array(':id' => $_GET['comm']) est un tableau associatif qui mappe un espace réservé :id dans l'instruction préparée à une valeur obtenue à partir du tableau superglobal $_GET. */
   } catch (PDOException $e){
     echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
   }
 
-$result=$stmt->fetchAll();
-$stock=$_GET['comm'];
+$result=$stmt->fetchAll(); /* $stmt est un objet PDOStatement, qui représente une instruction préparée qui a été exécutée.
+fetchAll() est une méthode de l'objet PDOStatement qui récupère toutes les lignes du jeu de résultats de l'instruction exécutée.
+Le résultat est stocké dans la variable $result, qui sera un tableau contenant toutes les lignes du jeu de résultats. */
+$stock=$_GET['comm']; /* $_GET : Il s'agit d'un tableau superglobal en PHP qui contient les variables transmises au script via la chaîne de requête URL. Il s'appelle $_GET car il récupère les données de l'URL à l'aide de la méthode HTTP GET.
+['comm'] : Il s'agit de la clé de la valeur récupérée du tableau $_GET. En d’autres termes, il s’agit du nom de la variable transmise dans la chaîne de requête URL. */
 ?>
 
 <?php
@@ -53,29 +58,11 @@ foreach($result as $row){
     break;
   }
 }
+/* '.$row['nomplat'].' est une variable PHP qui est concaténée (jointe) à la chaîne HTML environnante. Spécifiquement:
+$row est un tableau ou un objet contenant des données extraites d'une base de données ou d'une autre source de données.
+['nomplat'] accède à une clé ou une propriété spécifique dans le tableau/objet $row, qui contient la valeur du champ "nomplat".
+Le point (.) est l'opérateur de concaténation PHP, qui joint la chaîne HTML avec la valeur $row['nomplat']. */
 ?>
-
-
-
-
-<!--div class="container">
-  <div class="row justify-content-center g-0">
-  <div class="card mb-3" style="max-width: 580px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="assets/img/food/cheesburger.jpg" class="img-fluid border border-dark border-4" alt="cheesburger">
-    </div>
-    <div class="col-md-8 cardscolor">
-      <div class="card-body">
-        <h5 class="card-title txtcolor">Cheesburger</h5>
-        <p class="card-text txtcolor">Booooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooof ?</p>
-        <a href="#" class="btn btn-primary">Commander</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div-->
 
 </div>
 
