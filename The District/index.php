@@ -34,7 +34,7 @@ $result=$stmt->fetchAll();
   $i=0;
         foreach($result as $row){
             echo '<div class="col-sm-12 col-lg-4">
-              <a href="categorie.php">
+              <a href="platsparcategorie.php?catplat='.$row['id'].'">
                 <img src="assets/img/category/'.$row['image'].'"class="animeimage posImage" alt="'.$row['libelle'].'">
                 <p>'.$row['libelle'].'</p>
                 <div class="card-body">
