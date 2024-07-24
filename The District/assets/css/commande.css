@@ -130,13 +130,12 @@ body{
     color:white;
 }
 
-/*#text1{
-    display:block;
-    text-align: center;
+#boutoncommander{
+    margin-top: 40px;
+    margin-left: 100px;
 }
 
-#text2{
-    display:block;
-    margin-left: 65%;
-    margin-bottom: 30%;
-}*/
+#image{
+    width: 1320px;
+    height: 300px;
+}

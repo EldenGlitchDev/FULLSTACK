@@ -3,12 +3,62 @@
     ?>
     <div class="container">
 
-    <br>
+    
 
     <div class="container" id="background-img"><br>
 <div class="row justify-content-center">
 
-<div class="container">
+<?php
+  $stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.prix, plat.description, categorie.libelle AS nomcat, plat.id, id_categorie 
+                            FROM plat LEFT JOIN categorie ON plat.id_categorie=categorie.id 
+                                WHERE plat.id= :id ORDER BY categorie.libelle DESC");
+  try{
+    $stmt->execute(array(':id' => $_GET['comm']));
+  } catch (PDOException $e){
+    echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
+  }
+
+$result=$stmt->fetchAll();
+$stock=$_GET['comm'];
+?>
+
+<?php
+$i=0;
+foreach($result as $row){
+  echo '<div class="container">
+  <div class="row justify-content-center g-0">
+  <div class="card mb-3" style="max-width: 750px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="assets/img/food/'.$row['image'].'" class="img-fluid border border-dark border-4" id="image" alt="'.$row['nomplat'].'">
+    </div>
+    <div class="col-md-8 cardscolor">
+      <div class="card-body">
+        <h5 class="card-title txtcolor">'.$row['nomplat'].'</h5>
+        <p class="card-text txtcolor">'.$row['description'].'</p>
+        <p class="card-text txtcolor">Prix :<b> '.$row['prix'].' €</b></p>
+        <div class="d-flex justify-content-end">
+        <form action="commande.php" method="GET" class="col-6">
+              <button type="submit" name="comm" class="btn btn-primary" value="'.$row['id'].'" id="boutoncommander">Commander</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>';
+  $i++;
+  if($i==1){
+    break;
+  }
+}
+?>
+
+
+
+
+<!--div class="container">
   <div class="row justify-content-center g-0">
   <div class="card mb-3" style="max-width: 580px;">
   <div class="row g-0">
@@ -25,7 +75,7 @@
   </div>
 </div>
 </div>
-</div>
+</div-->
 
 </div>
 
@@ -71,14 +121,14 @@
 
 </div>
         
-    <br>
+    
+</div>
 
     <?php
     require_once('footer.php')
 ?>
 
-    </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 <script src="assets/js/commande.js"></script>
 </body>
 </html>

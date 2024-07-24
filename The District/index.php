@@ -58,7 +58,15 @@ $result=$stmt->fetchAll();
 
         <?php
             // Préparation de la requête SQL pour les plats les plus vendus
-         $stmt=$dbh->prepare("SELECT p.id,p.id_categorie,c.id_plat,SUM(quantite) as quantite_vendue,SUM(quantite)*prix as rentabilite,p.libelle,p.description,p.prix,p.image FROM commande c LEFT JOIN plat p ON c.id_plat=p.id WHERE c.etat!='Annulée' GROUP BY c.id_plat ORDER BY rentabilite DESC;");
+         $stmt=$dbh->prepare("SELECT p.id,p.id_categorie,c.id_plat,SUM(quantite) 
+                                AS quantite_vendue,SUM(quantite)*prix 
+                                  AS rentabilite,p.libelle,p.description,p.prix,p.image 
+                                    FROM commande c 
+                                      LEFT JOIN plat p 
+                                        ON c.id_plat=p.id 
+                                          WHERE c.etat!='Annulée' 
+                                            GROUP BY c.id_plat 
+                                              ORDER BY rentabilite DESC;");
           
           try{
             // Exécution de la requête SQL du dessus
@@ -77,7 +85,7 @@ $result=$stmt->fetchAll();
        $i=0;
         foreach($result as $row){
           echo '<div class="col-sm-12 col-lg-4">
-              <a href="commande.php">
+              <a href="commande.php?comm='.$row['id'].'">
                 <img src="assets/img/food/'.$row['image'].'"class="animeimage posImage" alt="'.$row['libelle'].'">
                 <p>'.$row['libelle'].'</p>
                 <div class="card-body">

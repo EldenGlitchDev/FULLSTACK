@@ -70,3 +70,8 @@ body{
     width: 1320px;
     height: 300px;
 }
+
+#boutoncommander{
+    margin-top: 10px;
+    margin-left: 50px;
+}

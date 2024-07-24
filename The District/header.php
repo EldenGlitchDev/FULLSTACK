@@ -68,6 +68,33 @@ try {
     case '/platsparcategorie.php?catplat=13':
       echo '<title>Salades</title>';
       break;
+      case '/commande.php?comm=5':
+        echo '<title>Pizza Bianca</title>';
+        break;
+        case '/commande.php?comm=14':
+          echo '<title>Pizza Margherita</title>';
+          break;
+          case '/commande.php?comm=4':
+            echo '<title>District Burger</title>';
+            break;
+            case '/commande.php?comm=10':
+              echo '<title>Cheeseburger</title>';
+              break;
+              case '/commande.php?comm=9':
+                echo '<title>Buffalo Chicken Wrap</title>';
+                break;
+                case '/commande.php?comm=12':
+                  echo '<title>Spaghetti aux légumes</title>';
+                  break;
+                  case '/commande.php?comm=16':
+                    echo '<title>Lasagnes</title>';
+                    break;
+                    case '/commande.php?comm=17':
+                      echo '<title>Tagliatelles au saumon</title>';
+                      break;
+                      case '/commande.php?comm=13':
+                        echo '<title>Salade César</title>';
+                        break;
 
 
     default:                        // Si l'URL actuelle ne correspond à aucune des URL spécifiées, le code du bloc par défaut sera exécuté, ce qui définit le titre sur "NoPage"
@@ -114,6 +141,36 @@ try {
     case '/platsparcategorie.php?catplat=13':
         echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
       break;
+      case '/commande.php?comm=5':
+        echo '<link rel="stylesheet" href="assets/css/commande.css">';
+        break;
+        case '/commande.php?comm=14':
+          echo '<link rel="stylesheet" href="assets/css/commande.css">';
+          break;
+          case '/commande.php?comm=4':
+            echo '<link rel="stylesheet" href="assets/css/commande.css">';
+            break;
+            case '/commande.php?comm=10':
+              echo '<link rel="stylesheet" href="assets/css/commande.css">';
+              break;
+              case '/commande.php?comm=9':
+                echo '<link rel="stylesheet" href="assets/css/commande.css">';
+                break;
+                case '/commande.php?comm=12':
+                  echo '<link rel="stylesheet" href="assets/css/commande.css">';
+                  break;
+                  case '/commande.php?comm=16':
+                    echo '<link rel="stylesheet" href="assets/css/commande.css">';
+                    break;
+                    case '/commande.php?comm=17':
+                      echo '<link rel="stylesheet" href="assets/css/commande.css">';
+                      break;
+                      case '/commande.php?comm=13':
+                        echo '<link rel="stylesheet" href="assets/css/commande.css">';
+                        break;
+                        case '/commande.php?comm=15':
+                          echo '<link rel="stylesheet" href="assets/css/commande.css">';
+                          break;
 
     default: // The default case is used to specify a fallback CSS stylesheet if the current URL does not match any of the specified URLs. In this case, it links to assets/css/index.css
       echo '<link rel="stylesheet" href="assets/css/index.css">';
