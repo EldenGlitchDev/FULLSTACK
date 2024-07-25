@@ -11,7 +11,7 @@ try{
   $stmt->execute();
 } catch (PDOException $e){
   // affiche un message d'erreur si la requête échoue
-  echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
+  echo 'Erreur lors de l\'exécution de posImala requête : '. $e->getMessage();
 }
 
 // récupération des résultats de la requête

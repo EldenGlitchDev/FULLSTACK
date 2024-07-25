@@ -130,12 +130,23 @@ body{
     color:white;
 }
 
-#boutoncommander{
-    margin-top: 40px;
-    margin-left: 100px;
-}
-
 #image{
     width: 1320px;
-    height: 300px;
+    height: 320px;
+}
+
+.quantite{
+    margin-left: 487px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.barrequantite{
+    margin-left: 520px;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color:#E3A592;
 }

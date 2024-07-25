@@ -32,7 +32,7 @@ $i=0;
 foreach($result as $row){
   echo '<div class="container">
   <div class="row justify-content-center g-0">
-  <div class="card mb-3" style="max-width: 750px;">
+  <div class="card mb-3" style="max-width: 1000px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="assets/img/food/'.$row['image'].'" class="img-fluid border border-dark border-4" id="image" alt="'.$row['nomplat'].'">
@@ -42,11 +42,8 @@ foreach($result as $row){
         <h5 class="card-title txtcolor">'.$row['nomplat'].'</h5>
         <p class="card-text txtcolor">'.$row['description'].'</p>
         <p class="card-text txtcolor">Prix :<b> '.$row['prix'].' €</b></p>
-        <div class="d-flex justify-content-end">
-        <form action="commande.php" method="GET" class="col-6">
-              <button type="submit" name="comm" class="btn btn-primary" value="'.$row['id'].'" id="boutoncommander">Commander</button>
-        </form>
-        </div>
+        <p class="txtcolor quantite fs-4">Quantité :</p>
+              <input class="input_style barrequantite" type="number" tabindex="5" min="1" max="500" value="1" required>
       </div>
     </div>
   </div>

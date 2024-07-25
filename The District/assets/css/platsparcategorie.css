@@ -95,3 +95,8 @@ body{
     width:2000px;
   min-height:15px;
 }
+
+a{
+    text-decoration: none;
+    color:#E3A592;
+}

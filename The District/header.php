@@ -123,6 +123,12 @@ try {
     case '/commande.php':
       echo '<link rel="stylesheet" href="assets/css/commande.css">';
       break;
+    case '/politique_de_confidentialite.php':
+      echo '<link rel="stylesheet" href="assets/css/mention_polCon.css">';
+      break;
+    case '/mentions_legales.php':
+      echo '<link rel="stylesheet" href="assets/css/mention_polCon.css">';
+      break;
     case '/platsparcategorie.php?catplat=4':
         echo '<link rel="stylesheet" href="assets/css/platsparcategorie.css">';
       break;
@@ -197,6 +203,10 @@ try {
               <a class="nav-link mx-5 px-4 couleurbouton" href="categorie.php">Catégorie</a>
               <a class="nav-link mx-5 px-4 couleurbouton" href="touslesplats.php">Plats</a>
               <a class="nav-link mx-5 px-4 couleurbouton" href="contact.php">Contact</a>
+              <form class="d-flex d-lg-none">
+          <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
+          <button class="btn btn-outline-light" type="submit">Rechercher</button>
+        </form>
             </div>
           </div>
         </div>
@@ -206,10 +216,10 @@ try {
     <?php
     if ($_SERVER['REQUEST_URI'] == "/index.php") { // affiche la vidéo sur la page index avec sa barre de recherche
       echo '<section>
-  <div class="container">
-    <div class="row">
-    <label for="recherche" class="form-label"></label>
-    <input type="text" class="form-control-sm col-2" id="recherche" placeholder="Recherche...">
+<div class="container">
+  <div class="row">
+    <label for="recherche" class="form-label d-none d-md-block"></label>
+    <input type="text" class="form-control-sm col-2 d-none d-md-block" id="recherche" placeholder="Recherche...">
   </div>
 </div>
 

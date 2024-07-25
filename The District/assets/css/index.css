@@ -1,3 +1,5 @@
+/*INDEX*/
+
 body{
     background-color: #29334B;
 
@@ -30,60 +32,13 @@ body{
     height: 300px;
 }
 
-#pizzamargarita{
-    width: 280px;
-    height: 180px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#plat1{
-    display:block;
-    text-align:center;
-}
-
-#hamburger{
-    width: 280px;
-    height: 180px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#plat2{
-    display:block;
-    text-align:center;
-}
-
-#spaghetti{
-    width: 280px;
-    height: 180px;
-    border-radius: 50px;
-    border:solid;
-    border:10px solid;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#plat3{
-    display:block;
-    text-align:center;
-}
-
 p{
     color:#E3A592;
     font-family: Georgia, serif;
     font-size:25px;
     font-weight: bold;
     text-align: center;
+    filter:drop-shadow(10px 3px 5px red);
 }
 
 #bandereaubas{
@@ -169,6 +124,7 @@ p{
 
 a{
     text-decoration: none;
+    color:#E3A592;
 }
 
 h1{
@@ -181,5 +137,3 @@ h1{
 .backgroundTitle{
     background-color: black;
 }
-
-/*filter: drop-shadow*/

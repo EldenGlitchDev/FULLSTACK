@@ -1,10 +1,6 @@
 body{
     background-color: #29334B;
-}
 
-#background-img{
-    background-image: url(../img/ibg.jpg);
-    background-size: cover;
 }
 
 #boutonderoulant{
@@ -15,6 +11,13 @@ body{
     color: #E3A592;
     font-size: 30px;
     font-family:Georgia, serif;
+}
+
+p, ul{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:19px;
+    text-align: justify;
 }
 
 #bandereaubas{
@@ -29,13 +32,11 @@ body{
     
 }
 
-
 #logoreddit{
     width: 40px;
     height: 40px;
     
 }
-
 
 #logoyoutube{
     width: 40px;
@@ -43,13 +44,11 @@ body{
     
 }
 
-
 #logoinstagram{
     width: 40px;
     height: 40px;
     
 }
-
 
 #logofacebook{
     width: 40px;
@@ -57,50 +56,27 @@ body{
     
 }
 
-
 #logotwitter{
     width: 40px;
     height: 40px;
-    
 }
 
-#image{
-    width: 1320px;
-    height: 300px;
-}
-
-#couleurtxt{
-    color: #F50B0B;
+h2, h3{
+    color:#E3A592;
     font-family: Georgia, serif;
-    font-size:12px;
+    font-size:25px;
     font-weight: bold;
+    text-align: start;
 }
 
-#NometPrenomCSS{
-    font-family: Georgia, serif;
-    font-size:20px;
-    font-weight: bold;
+hr{
+    border: 1px solid #E3A592;
 }
 
-#emailCSS{
-    font-family: Georgia, serif;
-    font-size:20px;
-    font-weight: bold;
-}
-
-#telephoneCSS{
-    font-family: Georgia, serif;
-    font-size:20px;
-    font-weight: bold;
-}
-
-#votreadresseCSS{
-    font-family: Georgia, serif;
-    font-size:20px;
-    font-weight: bold;
+h1{
+    color:#E3A592;
 }
 
 a{
-    text-decoration: none;
     color:#E3A592;
 }
