@@ -1,11 +1,13 @@
 - Mise en page mentions légales/politique de confidentialité (FAIT)
 - Quantité (FAIT)
 - Recherche (FAIT)
-- Personnaliser barre de recherche
+- Personnaliser barre de recherche (FAIT)
 - Footer
 - DAO.php
 - Mailer
 - Faire une seule page CSS
+- Regrouper tout les foreach en une page avec fonction isset
+- Réparer les fonctions pour "platsparcategorie.php"
 
 
 - 2 index, 1 categorie, 1 commande, 2 plats par catégorie, 1 tous les plats (requêtes)

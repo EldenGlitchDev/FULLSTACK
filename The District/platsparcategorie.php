@@ -20,6 +20,7 @@ $result=$stmt->fetchAll();
 $stock=$_GET['catplat'];
 ?>
 
+
 <div class="container mt-3">
   <div class="row justify-content-center">
 
@@ -27,15 +28,25 @@ $stock=$_GET['catplat'];
   $stmtCat = $dbh->prepare("SELECT libelle FROM categorie WHERE id = :id");
   $stmtCat->execute(array(':id' => $_GET['catplat']));
   $categoryName = $stmtCat->fetchColumn();
-?>
+  ?>
+
+  <!--?php
+    require_once('DAO.php');
+    $result=platsParCategorieTitre();
+  ?-->
 
 <div class="container">
-    <div class="row justify-content-start titreconteneur">
-<div class="col-6 col-lg-1 mb-5" id="titre">
-<h3><?php echo $categoryName; ?></h3>
-</div>
-</div>
+  <div class="row justify-content-start titreconteneur">
+    <div class="col-6 col-lg-1 mb-5" id="titre">
+      <h3><?php echo $categoryName; ?></h3>
+    </div>
   </div>
+</div>
+
+<!--?php
+  require_once('DAO.php');
+  $result=platsParCategorieCorps();
+?-->
 
 <?php
 

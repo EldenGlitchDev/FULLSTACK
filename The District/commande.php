@@ -8,7 +8,7 @@
     <div class="container" id="background-img"><br>
 <div class="row justify-content-center">
 
-<?php
+<!--?php
   $stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.prix, plat.description, categorie.libelle AS nomcat, plat.id, id_categorie 
                             FROM plat LEFT JOIN categorie ON plat.id_categorie=categorie.id 
                                 WHERE plat.id= :id ORDER BY categorie.libelle DESC");
@@ -25,6 +25,11 @@ fetchAll() est une méthode de l'objet PDOStatement qui récupère toutes les li
 Le résultat est stocké dans la variable $result, qui sera un tableau contenant toutes les lignes du jeu de résultats. */
 $stock=$_GET['comm']; /* $_GET : Il s'agit d'un tableau superglobal en PHP qui contient les variables transmises au script via la chaîne de requête URL. Il s'appelle $_GET car il récupère les données de l'URL à l'aide de la méthode HTTP GET.
 ['comm'] : Il s'agit de la clé de la valeur récupérée du tableau $_GET. En d’autres termes, il s’agit du nom de la variable transmise dans la chaîne de requête URL. */
+?-->
+
+<?php
+require_once('DAO.php');
+$result=commande();
 ?>
 
 <?php

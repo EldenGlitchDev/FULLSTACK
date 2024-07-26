@@ -2,7 +2,7 @@
     require_once('header.php')
   ?>
 
-<?php
+<!--?php
 // récupère toutes les données de catégorie
 $stmt=$dbh->prepare("SELECT * FROM categorie WHERE active='Yes'");
 
@@ -16,6 +16,11 @@ try{
 
 // récupération des résultats de la requête
 $result=$stmt->fetchAll();
+?-->
+
+<?php
+  require_once('DAO.php');
+  $result=indexTouteslesCatégories();
 ?>
 
   <div class="container">
@@ -57,6 +62,10 @@ $result=$stmt->fetchAll();
 </div>
 
         <?php
+  require_once('DAO.php');
+  $result=indexPlatslesplusVendus();
+?>
+        <!--?php
             // Préparation de la requête SQL pour les plats les plus vendus
          $stmt=$dbh->prepare("SELECT p.id,p.id_categorie,c.id_plat,SUM(quantite) 
                                 AS quantite_vendue,SUM(quantite)*prix 
@@ -78,7 +87,8 @@ $result=$stmt->fetchAll();
 
         // Récupération des résultats de la requête
         $result=$stmt->fetchAll();
-        ?>
+        ?-->
+
         
         
        <?php
