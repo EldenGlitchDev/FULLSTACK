@@ -3,21 +3,23 @@
     <div class="row g-0 bg-dark">
 
     <div class="d-flex justify-content-center">
-      <a class="col-1 mx-1" href="mentions_legales.php">Mentions légales</a>
-      <img src="assets/img/Icones/icons8-logo-google-48.png" id="logogoogle" alt="googlelogo" title="googlelogo" class="col-1">
+      <a class="col-1 mx-1 mentionsLegPolConf" href="mentions_legales.php">Mentions légales</a>
+
+      <a href="https://www.google.com/"><img src="assets/img/Icones/icons8-logo-google-48.png" alt="googlelogo" title="googlelogo" class="col-1 logoFooter"></a>
       
-      <img src="assets/img/Icones/icons8-reddit-48.png" id="logoreddit" alt="redditlogo" title="redditlogo" class="col-1">
+      <a href="https://www.reddit.com/"><img src="assets/img/Icones/icons8-reddit-48.png" alt="redditlogo" title="redditlogo" class="col-1 logoFooter"></a>
       
-      <img src="assets/img/Icones/icons8-youtube-48.png" id="logoyoutube" alt="youtubelogo" title="youtubelogo" class="col-1">
+      <a href="https://www.youtube.com/"><img src="assets/img/Icones/icons8-youtube-48.png" alt="youtubelogo" title="youtubelogo" class="col-1 logoFooter"></a>
 
-      <img src="assets/img/the_district_brand/facebook_cover_photo_1-removebg-preview.png" id="bandereaubas" alt="bandereaubas" title="bandereaubas" class="col-6">
+      <a href="index.php"><img src="assets/img/the_district_brand/facebook_cover_photo_1-removebg-preview.png" id="bandereaubas" alt="bandereaubas" title="bandereaubas" class="col-6"></a>
 
-      <img src="assets/img/Icones/icons8-instagram-48.png" id="logoinstagram" alt="instagramlogo" title="instagramlogo" class="col-1">
+      <a href="https://www.instagram.com/"><img src="assets/img/Icones/icons8-instagram-48.png" alt="instagramlogo" title="instagramlogo" class="col-1 logoFooter"></a>
 
-      <img src="assets/img/Icones/icons8-facebook-48.png" id="logofacebook" alt="facebooklogo" title="facebooklogo" class="col-1">
+      <a href="https://www.facebook.com/?locale=fr_FR"><img src="assets/img/Icones/icons8-facebook-48.png" alt="facebooklogo" title="facebooklogo" class="col-1 logoFooter"></a>
 
-      <img src="assets/img/Icones/icons8-twitter-48.png" id="logotwitter" alt="twitterlogo" title="twitterlogo" class="col-1">
-      <a class="col-1 mx-5" href="politique_de_confidentialite.php">Politique de confidentialité</a>
+      <a href="https://x.com/?lang=fr"><img src="assets/img/Icones/icons8-twitter-48.png" alt="twitterlogo" title="twitterlogo" class="col-1 logoFooter"></a>
+
+      <a class="col-1 mx-5 mentionsLegPolConf" href="politique_de_confidentialite.php">Politique de confidentialité</a>
     </div>
 
     </div>

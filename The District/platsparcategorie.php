@@ -26,13 +26,17 @@ $stock=$_GET['catplat'];
 
 <?php
   $stmtCat = $dbh->prepare("SELECT libelle FROM categorie WHERE id = :id");
+try{
   $stmtCat->execute(array(':id' => $_GET['catplat']));
+} catch (PDOException $e) {
+  echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
+}
   $categoryName = $stmtCat->fetchColumn();
   ?>
 
   <!--?php
     require_once('DAO.php');
-    $result=platsParCategorieTitre();
+    $result=platsParCategorieTitre(); (!!! NE FONCTIONNE PAS POUR LE MOMENT !!!)
   ?-->
 
 <div class="container">
@@ -45,7 +49,7 @@ $stock=$_GET['catplat'];
 
 <!--?php
   require_once('DAO.php');
-  $result=platsParCategorieCorps();
+  $result=platsParCategorieCorps(); (!!! NE FONCTIONNE PAS POUR LE MOMENT !!!)
 ?-->
 
 <?php
@@ -54,7 +58,7 @@ $i=0;
 foreach($result as $row){
   echo '<div class=container>
   <div class="row justify-content-center g-0">
-  <div class="card mb-3" style="max-width: 750px;">
+  <div class="card mb-3" style="max-width: 1000px;">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="assets/img/food/'.$row['image'].'" class="img-fluid rounded-start border border-dark border-4" id="image" alt="'.$row['nomplat'].'">

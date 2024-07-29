@@ -1,3 +1,5 @@
+/*CATEGORIES*/
+
 body{
     background-color: #29334B;
 
@@ -96,42 +98,15 @@ body{
     height: 150px; 
 }
 
-#logogoogle{
-    width: 40px;
-    height: 40px;
-    
+.logoFooter{
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
 }
 
-
-#logoreddit{
-    width: 40px;
-    height: 40px;
-    
-}
-
-
-#logoyoutube{
-    width: 40px;
-    height: 40px;
-    
-}
-
-
-#logoinstagram{
-    width: 40px;
-    height: 40px;
-    
-}
-
-#logofacebook{
-    width: 40px;
-    height: 40px;
-    
-}
-
-#logotwitter{
-    width: 40px;
-    height: 40px;    
+.mentionsLegPolConf{
+    margin-top: 60px;
+    font-weight: bold;
 }
 
 p{
@@ -140,7 +115,10 @@ p{
     font-size:25px;
     font-weight: bold;
     text-align: center;
-    filter:drop-shadow(10px 3px 5px #a14529);
+    filter:drop-shadow(15px 3px 4px #a14529);
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 5px;
 }
 
 .bprecsuiv{

@@ -77,67 +77,18 @@ $result = indexPlatslesplusVendus();
 
 
 
-//3) Fonctions SQL pour TITRE plats par catégorie (NE FONCTIONNE PAS POUR LE MOMENT)
-function platsParCategorieTitre(){
-
-$servername = "localhost";
-$username = "admin";
-$password = "Afpa1234";
-$dbname = "the_district";
-
-try {
-  $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // configurer le mode d'erreur PDO pour générer des exceptions
-  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-  echo "Erreur de connexion à la base de données: " . $e->getMessage();
-}
-$stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.prix, plat.description, categorie.libelle AS nomcat, plat.id, id_categorie FROM plat LEFT JOIN categorie on plat.id_categorie=categorie.id WHERE id_categorie= :id ORDER BY categorie.libelle DESC");
-try{
-  // exécute de la requête SQL
-  $stmt->execute(array(':id' => $_GET['catplat']));
-  /*$stmt->execute(array($_GET['catplat']));*/
-} catch (PDOException $e){
-  // affiche un message d'erreur si la requête échoue
-  echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
-}
-
-$result=$stmt->fetchAll();
-$stock=$_GET['catplat'];
-return $result;
-return $stock;
-}
-$result = platsParCategorieTitre();
+//3) Fonctions SQL CORPS plats par catégorie (!!! NE FONCTIONNE PAS POUR LE MOMENT !!!)
+function platsParCategorieCorps(){}
 
 
 
-//4) Fonction SQL CORPS plats par catégorie (NE FONCTIONNE PAS POUR LE MOMENT)
-function platsParCategorieCorps(){
 
-$servername = "localhost";
-$username = "admin";
-$password = "Afpa1234";
-$dbname = "the_district";
 
-try {
-  $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // configurer le mode d'erreur PDO pour générer des exceptions
-  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-  echo "Erreur de connexion à la base de données: " . $e->getMessage();
-}
-  $stmt = $dbh->prepare("SELECT libelle FROM categorie WHERE id = :id");
-try{
-  $stmt->execute(array(':id' => $_GET['catplat']));
-} catch (PDOException $e){
-  // affiche un message d'erreur si la requête échoue
-  echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
-}
 
-  $result = $stmt->fetchColumn();
-  return $result;
-}
-$result = platsParCategorieCorps();
+//4) Fonction SQL TITRE plats par catégorie (!!! NE FONCTIONNE PAS POUR LE MOMENT !!!)
+function platsParCategorieTitre(){}
+
+
 
 
 
@@ -202,15 +153,33 @@ try{
 $result=$stmt->fetchAll();
 return $result;
 }
-$result = categorie(); // j'en suis là !!!!!!!!!!!
+$result = categorie();
 
 
-
-
-
-// Fonction SQL tous les plats
+//7) Fonction SQL tous les plats
 function touslesPlats(){
-
+  $servername = "localhost";
+  $username = "admin";
+  $password = "Afpa1234";
+  $dbname = "the_district";
+  
+  try {
+    $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // configurer le mode d'erreur PDO pour générer des exceptions
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  } catch (PDOException $e) {
+    echo "Erreur de connexion à la base de données: " . $e->getMessage();
+  }
+  $stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.prix, plat.description, categorie.libelle
+                          AS nomcat, plat.id, id_categorie FROM plat LEFT JOIN categorie ON plat.id_categorie = categorie.id
+                              WHERE id_categorie ORDER BY categorie.libelle DESC");
+  try{
+    $stmt->execute();
+  } catch (PDOException $e){
+    echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage(); 
+  }
+  $result=$stmt->fetchAll();
+  return $result;
 }
-
+$result = touslesPlats();
 ?>

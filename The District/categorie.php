@@ -8,7 +8,7 @@ require_once('header.php')
 
 
 
-<?php
+<!--?php
 // récupère toutes les données de catégorie
 $stmt=$dbh->prepare("SELECT * FROM categorie WHERE active='Yes'");
 
@@ -22,6 +22,11 @@ try{
 
 // récupération des résultats de la requête
 $result=$stmt->fetchAll();
+?-->
+
+<?php
+  require_once('DAO.php');
+  $result=categorie();
 ?>
 
 <?php

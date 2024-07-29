@@ -1,3 +1,5 @@
+/*TOUS LES PLATS*/
+
 .cardscolor{
     background-color: #360E44 ;
 }
@@ -23,42 +25,15 @@ body{
     border-color: black;
 }
 
-#logogoogle{
-    width: 40px;
-    height: 40px;
-    
+.logoFooter{
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
 }
 
-
-#logoreddit{
-    width: 40px;
-    height: 40px;
-    
-}
-
-
-#logoyoutube{
-    width: 40px;
-    height: 40px;
-    
-}
-
-
-#logoinstagram{
-    width: 40px;
-    height: 40px;
-    
-}
-
-#logofacebook{
-    width: 40px;
-    height: 40px;
-    
-}
-
-#logotwitter{
-    width: 40px;
-    height: 40px;    
+.mentionsLegPolConf{
+    margin-top: 60px;
+    font-weight: bold;
 }
 
 #bandereaubas{
