@@ -5,7 +5,7 @@
     <div class="d-flex justify-content-center">
       <a class="col-1 mx-1 mentionsLegPolConf" href="mentions_legales.php">Mentions légales</a>
 
-      <a href="https://www.google.com/"><img src="assets/img/Icones/icons8-logo-google-48.png" alt="googlelogo" title="googlelogo" class="col-1 logoFooter"></a>
+      <a href="https://www.google.com/"><img src="assets/img/Icones/icons8-logo-google-48.png" alt="googlelogo" title="googlelogo" class="col-1 logoFooter"></a> <!-- LIEN SUR MON SITE WARHAMMER -->
       
       <a href="https://www.reddit.com/"><img src="assets/img/Icones/icons8-reddit-48.png" alt="redditlogo" title="redditlogo" class="col-1 logoFooter"></a>
       

@@ -38,7 +38,7 @@ body{
     font-size:25px;
     font-weight: bold;
     text-align: center;
-    filter:drop-shadow(15px 3px 4px #a14529);
+    filter:drop-shadow(10px 3px 4px #a14529);
     background-color: black;
     border-radius: 20px;
     margin-top: 5px;
