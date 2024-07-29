@@ -43,6 +43,7 @@ $pages=[
   '/platsparcategorie.php'=>'Plats par catégories',
   '/politique_de_confidentialite.php'=>'Politique de confidentialité',
   '/mentions_legales.php'=>'Mentions légales',
+  /* AJOUTER DES PAGES ICI EN CAS DE RAJOUT */ 
 ];
 
 $plats=[
@@ -52,6 +53,7 @@ $plats=[
   10 => 'Pastas',
   11 => 'Sandwichs',
   13 => 'Salades',
+  /* AJOUTER DES PLATS ICI EN CAS DE RAJOUT */
 ];
 
 $commandes=[
@@ -65,6 +67,7 @@ $commandes=[
   17 => 'Tagliatelles au saumon',
   13 => 'Salade César', 
   15 => 'Courgettes farcies au quinoa et duxelles de champignons'
+  /* AJOUTER DES COMMANDES ICI EN CAS DE RAJOUT */
 ];
 
 $url = $_SERVER['REQUEST_URI'];
@@ -93,13 +96,14 @@ if (isset($pages[$url])){
 ?>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="shortcut icon" href="assets/img/the_district_brand/favicon.png">
 
 
-  <?php
+  <!--?php
   switch ($_SERVER['REQUEST_URI']) { // Il s'agit d'une variable superglobale PHP qui renvoie l'URL actuelle de la page Web.
     case '/index.php':               // L'instruction switch est utilisée pour vérifier la valeur de $_SERVER['REQUEST_URI'] et exécuter différents blocs de code en fonction de l'URL.
-      echo '<link rel="stylesheet" href="assets/css/index.css">';
+      echo '<link rel="stylesheet" href="assets/css/styles.css">';
       break;
     case '/touslesplats.php':        // Pour chaque cas, le code vérifie si l'URL actuelle correspond à l'URL spécifiée. Si tel est le cas, il fait écho à une balise <link> qui renvoie à une feuille de style CSS spécifique.
       echo '<link rel="stylesheet" href="assets/css/touslesplats.css">';
@@ -169,10 +173,9 @@ if (isset($pages[$url])){
                           break;
 
     default: // The default case is used to specify a fallback CSS stylesheet if the current URL does not match any of the specified URLs. In this case, it links to assets/css/index.css
-      echo '<link rel="stylesheet" href="assets/css/index.css">';
+      echo '<link rel="stylesheet" href="assets/css/styles.css">';
   }
-?>
-
+?-->
 
 </head>
 
@@ -184,7 +187,7 @@ if (isset($pages[$url])){
       <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
           <a href="index.php"><img src="assets/img/the_district_brand/logo.png" alt="logo" width="150" height="110" class="mx-3" class="img-fluid"></a>
-          <button class="navbar-toggler couleurbouton" id="boutonderoulant" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler couleurbouton boutonderoulant" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">

@@ -41,7 +41,7 @@ $result=$stmt->fetchAll();
             echo '<div class="col-sm-12 col-lg-4">
               <a href="platsparcategorie.php?catplat='.$row['id'].'">
                 <img src="assets/img/category/'.$row['image'].'"class="animeimage posImage" alt="'.$row['libelle'].'">
-                <p>'.$row['libelle'].'</p>
+                <p class="pCouleurtxt">'.$row['libelle'].'</p>
                 <div class="card-body">
                 </div>
               </a>
@@ -97,7 +97,7 @@ $result=$stmt->fetchAll();
           echo '<div class="col-sm-12 col-lg-4">
               <a href="commande.php?comm='.$row['id'].'">
                 <img src="assets/img/food/'.$row['image'].'"class="animeimage posImage" alt="'.$row['libelle'].'">
-                <p>'.$row['libelle'].'</p>
+                <p class="pCouleurtxt">'.$row['libelle'].'</p>
                 <div class="card-body">
                 </div>
               </a>

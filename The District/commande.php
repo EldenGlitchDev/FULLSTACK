@@ -74,22 +74,22 @@ Le point (.) est l'opérateur de concaténation PHP, qui joint la chaîne HTML a
     <form id="formulaire" action="scriptformulairecommande.php" method="post">
     <div class="row">
   <div class="mb-3">
-    <label for="NometPrenom" class="form-label" id="NometPrenomCSS">Nom et prénom</label>
+    <label for="NometPrenom" class="form-label coordonneesCSS">Nom et prénom</label>
     <input type="text" name="NometPrenom" class="form-control" id="NometPrenomJS">
 <p id="couleurtxt">Ce champ est obligatoire</p>
   </div>
   <div class="mb-3 col-6">
-    <label for="email" class="form-label" id="emailCSS">Email</label>
+    <label for="email" class="form-label coordonneesCSS">Email</label>
     <input type="email" name="email" class="form-control" id="emailJS">
 <p id="couleurtxt">Ce champ est obligatoire</p>
   </div>
   <div class="mb-3 col-6">
-    <label for="telephone" class="form-label" id="telephoneCSS">Téléphone</label>
+    <label for="telephone" class="form-label coordonneesCSS">Téléphone</label>
     <input type="text" name="telephone" class="form-control" id="telephoneJS">
 <p id="couleurtxt">Ce champ est obligatoire</p>
   </div>
   <div class="mb-3">
-    <label for="votreadresse" class="form-label" id="votreadresseCSS">Votre adresse</label>
+    <label for="votreadresse" class="form-label coordonneesCSS">Votre adresse</label>
     <textarea class="form-control" name="votreadresse" rows="3" id="votreadresseJS"></textarea>
 <p id="couleurtxt">Ce champ est obligatoire</p>    
   </div>
