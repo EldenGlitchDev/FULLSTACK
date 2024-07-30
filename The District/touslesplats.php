@@ -23,8 +23,8 @@ $result=touslesPlats();
 
 <div class="container">
   <div class="row justify-content-center g-0">
-<?php
 
+<!--?php
 $i=0;
 foreach($result as $row){
   echo '<div class="col-md-6">
@@ -53,6 +53,11 @@ foreach($result as $row){
       }
 }
 
+?-->
+
+<?php
+require_once('DAO.php');
+touslesPlatsForeach($result)
 ?>
 
     <!--?php

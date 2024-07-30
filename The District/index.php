@@ -34,7 +34,7 @@ $result=$stmt->fetchAll();
 <h1>Les catégories</h1>
 </div>
 
-  <?php
+  <!--?php
 // affichage des catégories dans une card bootstrap pour les 6 premières catégories
   $i=0;
         foreach($result as $row){
@@ -54,6 +54,11 @@ $result=$stmt->fetchAll();
         }
       }
 /* ?catplat= : Il s'agit d'un paramètre de chaîne de requête nommé comm. Le ? caractère sépare le nom du fichier de la chaîne de requête. */
+?-->
+
+<?php
+  require_once('DAO.php');
+  indexTouteslesCategoriesForeach($result);
 ?>
 
 <div class="container">
@@ -93,7 +98,7 @@ $result=$stmt->fetchAll();
 
         
         
-       <?php
+       <!--?php
        $i=0;
         foreach($result as $row){
           echo '<div class="col-sm-12 col-lg-4">
@@ -111,7 +116,13 @@ $result=$stmt->fetchAll();
                 break;
               }
         } /* ?comm= : Il s'agit d'un paramètre de chaîne de requête nommé comm. Le ? caractère sépare le nom du fichier de la chaîne de requête. */
-        ?>
+        ?-->
+
+<?php
+  require_once('DAO.php');
+  indexPlatslesplusVendusForeach($result);
+?>
+
           </div>
         </div>
 

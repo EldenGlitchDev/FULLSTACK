@@ -5,7 +5,38 @@
 <div class="container">
 <br>
 
-<?php
+
+
+
+<div class="container mt-3">
+  <div class="row justify-content-center">
+
+<!--?php
+  $stmtCat = $dbh->prepare("SELECT libelle FROM categorie WHERE id = :id");
+try{
+  $stmtCat->execute(array(':id' => $_GET['catplat']));
+} catch (PDOException $e) {
+  echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
+}
+  $categoryName = $stmtCat->fetchColumn();
+  ?-->
+
+  <?php /* $categoryName se trouve dans cette fonction */
+    require_once('DAO.php');
+    $result=platsParCategorieTitre();
+  ?>
+
+<div class="container">
+  <div class="row justify-content-start titreconteneur">
+    <div class="col-6 col-lg-1 mb-5" id="titre">
+      <h3><?php echo $categoryName; ?></h3>
+    </div>
+  </div>
+</div>
+
+
+
+<!--?php
     $stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.prix, plat.description, categorie.libelle AS nomcat, plat.id, id_categorie FROM plat LEFT JOIN categorie on plat.id_categorie=categorie.id WHERE id_categorie= :id ORDER BY categorie.libelle DESC");
 try{
   // exécute de la requête SQL
@@ -18,41 +49,14 @@ try{
 
 $result=$stmt->fetchAll();
 $stock=$_GET['catplat'];
-?>
-
-
-<div class="container mt-3">
-  <div class="row justify-content-center">
-
-<?php
-  $stmtCat = $dbh->prepare("SELECT libelle FROM categorie WHERE id = :id");
-try{
-  $stmtCat->execute(array(':id' => $_GET['catplat']));
-} catch (PDOException $e) {
-  echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
-}
-  $categoryName = $stmtCat->fetchColumn();
-  ?>
-
-  <!--?php
-    require_once('DAO.php');
-    $result=platsParCategorieTitre(); (!!! NE FONCTIONNE PAS POUR LE MOMENT !!!)
-  ?-->
-
-<div class="container">
-  <div class="row justify-content-start titreconteneur">
-    <div class="col-6 col-lg-1 mb-5" id="titre">
-      <h3><?php echo $categoryName; ?></h3>
-    </div>
-  </div>
-</div>
-
-<!--?php
-  require_once('DAO.php');
-  $result=platsParCategorieCorps(); (!!! NE FONCTIONNE PAS POUR LE MOMENT !!!)
 ?-->
 
 <?php
+  require_once('DAO.php');
+  $result=platsParCategorieCorps();
+?>
+
+<!--?php
 
 $i=0;
 foreach($result as $row){
@@ -83,8 +87,12 @@ foreach($result as $row){
       }
 }
 
-?>
+?-->
 
+<?php
+  require_once('DAO.php');
+  platsParCategorieCorpsForeach($result);
+?>
 
   </div>
 </div>

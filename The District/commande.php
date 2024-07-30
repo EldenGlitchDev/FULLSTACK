@@ -32,7 +32,7 @@ require_once('DAO.php');
 $result=commande();
 ?>
 
-<?php
+<!--?php
 $i=0;
 foreach($result as $row){
   echo '<div class="container">
@@ -64,6 +64,11 @@ foreach($result as $row){
 $row est un tableau ou un objet contenant des données extraites d'une base de données ou d'une autre source de données.
 ['nomplat'] accède à une clé ou une propriété spécifique dans le tableau/objet $row, qui contient la valeur du champ "nomplat".
 Le point (.) est l'opérateur de concaténation PHP, qui joint la chaîne HTML avec la valeur $row['nomplat']. */
+?-->
+
+<?php
+  require_once('DAO.php');
+  commandeForeach($result);
 ?>
 
 </div>
