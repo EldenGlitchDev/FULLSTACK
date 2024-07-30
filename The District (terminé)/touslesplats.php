@@ -4,18 +4,6 @@
 
 <br>
 
-<!--?php
-  $stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.prix, plat.description, categorie.libelle
-                          AS nomcat, plat.id, id_categorie FROM plat LEFT JOIN categorie ON plat.id_categorie = categorie.id
-                              WHERE id_categorie ORDER BY categorie.libelle DESC");
-  try{
-    $stmt->execute();
-  } catch (PDOException $e){
-    echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage(); 
-  }
-  $result=$stmt->fetchAll();
-  ?-->
-
 <?php
 require_once('DAO.php');
 $result=touslesPlats();
@@ -54,11 +42,6 @@ foreach($result as $row){
 }
 
 ?>
-
-    <!--?php
-    require_once('divplatsPHP.php');    NON UTILISE POUR LE MOMENT
-    ?-->
-
 
     <?php
     require_once('boutonsSuivPrec.php');

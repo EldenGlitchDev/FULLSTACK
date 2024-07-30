@@ -2,22 +2,6 @@
     require_once('header.php')
   ?>
 
-<!--?php
-// récupère toutes les données de catégorie
-$stmt=$dbh->prepare("SELECT * FROM categorie WHERE active='Yes'");
-
-try{
-  // exécute de la requête SQL
-  $stmt->execute();
-} catch (PDOException $e){
-  // affiche un message d'erreur si la requête échoue
-  echo 'Erreur lors de l\'exécution de posImala requête : '. $e->getMessage();
-}
-
-// récupération des résultats de la requête
-$result=$stmt->fetchAll();
-?-->
-
 <?php
   require_once('DAO.php');
   $result=indexTouteslesCategories();
@@ -35,7 +19,6 @@ $result=$stmt->fetchAll();
 </div>
 
   <?php
-// affichage des catégories dans une card bootstrap pour les 6 premières catégories
   $i=0;
         foreach($result as $row){
             echo '<div class="col-sm-12 col-lg-4">
@@ -53,7 +36,6 @@ $result=$stmt->fetchAll();
                 break;
         }
       }
-/* ?catplat= : Il s'agit d'un paramètre de chaîne de requête nommé comm. Le ? caractère sépare le nom du fichier de la chaîne de requête. */
 ?>
 
 <div class="container">
@@ -67,32 +49,7 @@ $result=$stmt->fetchAll();
   require_once('DAO.php');
   $result=indexPlatslesplusVendus();
 ?>
-        <!--?php
-            // Préparation de la requête SQL pour les plats les plus vendus
-         $stmt=$dbh->prepare("SELECT p.id,p.id_categorie,c.id_plat,SUM(quantite) 
-                                AS quantite_vendue,SUM(quantite)*prix 
-                                  AS rentabilite,p.libelle,p.description,p.prix,p.image 
-                                    FROM commande c 
-                                      LEFT JOIN plat p 
-                                        ON c.id_plat=p.id 
-                                          WHERE c.etat!='Annulée' 
-                                            GROUP BY c.id_plat 
-                                              ORDER BY rentabilite DESC;");
-          
-          try{
-            // Exécution de la requête SQL du dessus
-            $stmt->execute();            
-          } catch (PDOException $e){
-            // Affichage d'un message d'erreur si la requête échoue
-            echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
-          }
 
-        // Récupération des résultats de la requête
-        $result=$stmt->fetchAll();
-        ?-->
-
-        
-        
        <?php
        $i=0;
         foreach($result as $row){
@@ -110,7 +67,7 @@ $result=$stmt->fetchAll();
               if($i==6){
                 break;
               }
-        } /* ?comm= : Il s'agit d'un paramètre de chaîne de requête nommé comm. Le ? caractère sépare le nom du fichier de la chaîne de requête. */
+        }
         ?>
           </div>
         </div>

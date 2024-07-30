@@ -18,7 +18,7 @@
 
 <h3 class="mt-4">Directeur de la publication</h3>
 
-<p class="paragraphePolMen">Nom du directeur : Monsieur Igor Gonzola</p> <!--Jean Bon/Thomato Ketchup/Ali Mentation/Igor Gonzola/Harry Cover/Laura Tatouille-->
+<p class="paragraphePolMen">Nom du directeur : Monsieur Igor Gonzola</p>
 <p class="paragraphePolMen">Fonction : Patron de <b><i>The District</i></b></p>
 <p class="paragraphePolMen">Adresse email du directeur : igorgonzola@skyrock.fr</p>
 

@@ -9,27 +9,21 @@ $dbname = "the_district";
 
 try {
   $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // configurer le mode d'erreur PDO pour générer des exceptions
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
   echo "Erreur de connexion à la base de données: " . $e->getMessage();
 }
-    // récupère toutes les données de catégorie
+  // récupère toutes les données de catégorie
     $stmt=$dbh->prepare("SELECT * FROM categorie WHERE active='Yes'");
     
     try{
-      // exécute de la requête SQL
       $stmt->execute();
     } catch (PDOException $e){
-      // affiche un message d'erreur si la requête échoue
       echo 'Erreur lors de l\'exécution de posImala requête : '. $e->getMessage();
     }
-    
-    // récupération des résultats de la requête
     $result=$stmt->fetchAll();
     return $result;
   }
-  /*appelez la fonction pour récupérer la valeur de $result*/
   $result = indexTouteslesCategories();
 
 
@@ -44,7 +38,6 @@ function indexPlatslesplusVendus(){
   
   try {
     $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // configurer le mode d'erreur PDO pour générer des exceptions
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
     echo "Erreur de connexion à la base de données: " . $e->getMessage();
@@ -61,18 +54,13 @@ function indexPlatslesplusVendus(){
                   ORDER BY rentabilite DESC;");
 
 try{
-// Exécution de la requête SQL du dessus
 $stmt->execute();            
 } catch (PDOException $e){
-// Affichage d'un message d'erreur si la requête échoue
 echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
 }
-
-// Récupération des résultats de la requête
 $result=$stmt->fetchAll();
 return $result;
 }
-/*appelez la fonction pour récupérer la valeur de $result*/
 $result = indexPlatslesplusVendus();
 
 
@@ -101,7 +89,6 @@ function commande(){
   
   try {
     $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // configurer le mode d'erreur PDO pour générer des exceptions
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
     echo "Erreur de connexion à la base de données: " . $e->getMessage();
@@ -110,9 +97,7 @@ function commande(){
                             FROM plat LEFT JOIN categorie ON plat.id_categorie=categorie.id 
                                 WHERE plat.id= :id ORDER BY categorie.libelle DESC");
   try{
-    $stmt->execute(array(':id' => $_GET['comm'])); /* $stmt est un objet PDOStatement, qui représente une instruction SQL préparée.
-    execute() est une méthode de l'objet PDOStatement qui exécute l'instruction préparée.
-    Le array(':id' => $_GET['comm']) est un tableau associatif qui mappe un espace réservé :id dans l'instruction préparée à une valeur obtenue à partir du tableau superglobal $_GET. */
+    $stmt->execute(array(':id' => $_GET['comm']));
   } catch (PDOException $e){
     echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
   }
@@ -134,7 +119,6 @@ function categorie(){
   
   try {
     $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // configurer le mode d'erreur PDO pour générer des exceptions
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
     echo "Erreur de connexion à la base de données: " . $e->getMessage();
@@ -142,14 +126,10 @@ function categorie(){
   $stmt=$dbh->prepare("SELECT * FROM categorie WHERE active='Yes'");
 
 try{
-  // exécute de la requête SQL
   $stmt->execute();
 } catch (PDOException $e){
-  // affiche un message d'erreur si la requête échoue
   echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
 }
-
-// récupération des résultats de la requête
 $result=$stmt->fetchAll();
 return $result;
 }
@@ -165,7 +145,6 @@ function touslesPlats(){
   
   try {
     $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // configurer le mode d'erreur PDO pour générer des exceptions
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
     echo "Erreur de connexion à la base de données: " . $e->getMessage();

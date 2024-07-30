@@ -8,11 +8,8 @@
 <?php
     $stmt=$dbh->prepare("SELECT plat.libelle AS nomplat, plat.image, plat.prix, plat.description, categorie.libelle AS nomcat, plat.id, id_categorie FROM plat LEFT JOIN categorie on plat.id_categorie=categorie.id WHERE id_categorie= :id ORDER BY categorie.libelle DESC");
 try{
-  // exécute de la requête SQL
   $stmt->execute(array(':id' => $_GET['catplat']));
-  /*$stmt->execute(array($_GET['catplat']));*/
 } catch (PDOException $e){
-  // affiche un message d'erreur si la requête échoue
   echo 'Erreur lors de l\'exécution de la requête : '. $e->getMessage();
 }
 
@@ -88,16 +85,6 @@ foreach($result as $row){
 
   </div>
 </div>
-
-
-<!--a href="#" class="btn btn-primary" id="boutoncommander">Commander</a-->
-
-
-<!--?php
-    require_once('cardPlatsParCategoriePHP.php') NON UTILISE POUR LE MOMENT
-?-->
-
-
 
 <?php
     require_once('boutonsSuivPrec.php')
