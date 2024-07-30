@@ -10,7 +10,6 @@
   <div class="container">
     <div class="parallax col-14 col-sm-12">
 
-
       <div class="container">
         <div class="row">
 
