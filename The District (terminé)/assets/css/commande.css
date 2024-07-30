@@ -1,0 +1,124 @@
+/*COMMANDE*/
+
+body{
+    background-color: #29334B;
+}
+
+#background-img{
+    background-image: url(../img/ibg.jpg);
+    background-size: cover;
+}
+
+#boutonderoulant{
+    background-color: #E3A592;
+}
+
+.couleurbouton{
+    color: #E3A592;
+    font-size: 30px;
+    font-family:Georgia, serif;
+}
+
+#bandereaubas{
+    width: 558px;
+    height: 150px;
+    
+}
+
+.logoFooter{
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
+}
+
+.mentionsLegPolConf{
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+#imgcommande{
+    width: 280px;
+    height: 180px;
+    display:block;
+    /*justify-content:left;*/
+    justify-content:start;
+    /*border-radius: 50px;*/
+    /*border:solid;*/
+    /*border:10px solid;*/
+}
+
+#rectangleviolet{
+    background-color: #62426D;
+    border:solid;
+    border:2px solid;
+    height: auto;
+    width: 700px;
+    
+}
+
+#couleurtxt{
+    color: #F50B0B;
+    font-family: Georgia, serif;
+    font-size:12px;
+    font-weight: bold;
+}
+
+#NometPrenomCSS{
+    font-family: Georgia, serif;
+    font-size:20px;
+    font-weight: bold;
+}
+
+#emailCSS{
+    font-family: Georgia, serif;
+    font-size:20px;
+    font-weight: bold;
+}
+
+#telephoneCSS{
+    font-family: Georgia, serif;
+    font-size:20px;
+    font-weight: bold;
+}
+
+#votreadresseCSS{
+    font-family: Georgia, serif;
+    font-size:20px;
+    font-weight: bold;
+}
+
+.txtrectangle{
+    font-family: Georgia, serif;
+    font-size:15px;
+    font-weight: bold;
+    color:white;
+}
+
+.cardscolor{
+    background-color: #360E44 ;
+}
+
+.txtcolor{
+    color:white;
+}
+
+#image{
+    width: 1320px;
+    height: 320px;
+}
+
+.quantite{
+    margin-left: 487px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.barrequantite{
+    margin-left: 520px;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color:#E3A592;
+}
