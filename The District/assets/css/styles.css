@@ -25,6 +25,7 @@ body{
     border-color: black;
     color:#E3A592;
     border-radius: 10px;
+    margin-top: -40px;
 }
 
 #video{
@@ -111,6 +112,11 @@ h1{
     background-color: black;
 }
 
+#imageBandereau{
+    width: 1320px;
+    height: 300px;
+}
+
 
 /*CATEGORIES*/
 
@@ -119,11 +125,6 @@ h1{
     font-family: Georgia, serif;
     background-color: #62426D;
     border-color: black;
-}
-
-#image{
-    width: 1320px;
-    height: 300px;
 }
 
 .posImage{
@@ -154,9 +155,9 @@ h1{
     margin-left: 50px;
 }
 
-#image{
+#imageTouslesPlats{
     width: 1320px;
-    height: 300px;
+    height: 320px;
 }
 
 
@@ -171,12 +172,6 @@ h1{
     color: #F50B0B;
     font-family: Georgia, serif;
     font-size:12px;
-    font-weight: bold;
-}
-
-#NometPrenomCSS{
-    font-family: Georgia, serif;
-    font-size:20px;
     font-weight: bold;
 }
 
@@ -215,7 +210,7 @@ h1{
     margin-top: 20px;
 }
 
-#image{
+.imageComm{
     width: 1320px;
     height: 320px;
 }
@@ -241,11 +236,6 @@ h1{
 .titreconteneur{
     width:2000px;
   min-height:15px;
-}
-
-#image{
-    width: 1320px;
-    height: 300px;
 }
 
 

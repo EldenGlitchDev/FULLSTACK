@@ -36,7 +36,9 @@ $result=$stmt->fetchAll();
             echo '<div class="col-sm-12 col-lg-4">
               <a href="platsparcategorie.php?catplat='.$row['id'].'">
                 <img src="assets/img/category/'.$row['image'].'"class="animeimage posImage" alt="'.$row['libelle'].'">
-                <p class="pCouleurtxt">'.$row['libelle'].'</p>
+                <div class="row justify-content-center">
+                <p class="pCouleurtxt col-7">'.$row['libelle'].'</p>
+                </div>
                 <div class="card-body">
                 </div>
               </a>

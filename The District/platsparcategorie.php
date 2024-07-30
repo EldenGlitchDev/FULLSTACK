@@ -61,7 +61,7 @@ foreach($result as $row){
   <div class="card mb-3" style="max-width: 1000px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="assets/img/food/'.$row['image'].'" class="img-fluid rounded-start border border-dark border-4" id="image" alt="'.$row['nomplat'].'">
+        <img src="assets/img/food/'.$row['image'].'" class="img-fluid rounded-start border border-dark border-4 imageComm" alt="'.$row['nomplat'].'">
       </div>
       <div class="col-md-8 cardscolor">
         <div class="card-body">

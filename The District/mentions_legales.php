@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row">
-<h1 class="titrePolMen">Mentions légales</h1><hr>
+<h1 class="mt-4 titrePolMen">Mentions légales</h1><hr>
 
 <h3 class="mt-4">Propriétaire du site</h3>
 

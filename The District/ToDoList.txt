@@ -5,10 +5,10 @@
 - Footer (FAIT)
 - DAO.php (FAIT)
 - Changer le switch des onglets (FAIT)
-- Faire une seule page CSS
+- Faire une seule page CSS (FAIT)
 - Réparer les fonctions pour "platsparcategorie.php"
 - Mailer
-- Regrouper tout les foreach en une page avec isset et fonctions
+- Regrouper tout les foreach en une page fonction avec le DAO
 
 
 - 2 index, 1 categorie, 1 commande, 2 plats par catégorie, 1 tous les plats (requêtes)

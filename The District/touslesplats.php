@@ -28,10 +28,10 @@ $result=touslesPlats();
 $i=0;
 foreach($result as $row){
   echo '<div class="col-md-6">
-  <div class="card mb-3" style="max-width: 680px;">
+  <div class="card mb-3" style="max-width: 630px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="assets/img/food/'.$row['image'].'" class="img-fluid rounded-start border border-dark border-4" id="image" alt="'.$row['nomplat'].'">
+        <img src="assets/img/food/'.$row['image'].'" class="img-fluid rounded-start border border-dark border-4" id="imageTouslesPlats" alt="'.$row['nomplat'].'">
       </div>
       <div class="col-md-8 cardscolor">
         <div class="card-body">

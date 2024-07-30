@@ -225,12 +225,11 @@ if (isset($pages[$url])){
     }
     // in_array : indique si une valeur appatient à un tableau
     // isset : indique si une variable est déclarée et est différente de null
-    // !!!!!!!! intégrer ['platcommande'] dans le 'execute' de la page commande' -> $GET_['platcommande'] !!!!!!!!!
     elseif (!in_array($_SERVER['REQUEST_URI'], ["/commande.php", "/scriptformulairecommande.php", "/politique_de_confidentialite.php", "/mentions_legales.php"]) && !isset($_GET['platcommande'])) {
       // afficher la banière image sur les autres pages hotmis la page de commande
       echo '<div class="container-fluid">
     <div class="row justify-content-center">
-      <img src="assets/img/bg1.jpeg" alt="bandereau" title="bandereau" id="image" >
+      <img src="assets/img/bg1.jpeg" alt="bandereau" title="bandereau" id="imageBandereau" >
     </div>
 </div>';
     } else {

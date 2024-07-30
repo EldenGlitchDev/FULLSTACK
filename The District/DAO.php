@@ -1,6 +1,6 @@
 <?php
 //1) Fonction SQL pour index toutes les catégories
-function indexTouteslesCatégories(){
+function indexTouteslesCategories(){
     
 $servername = "localhost";
 $username = "admin";
@@ -30,10 +30,10 @@ try {
     return $result;
   }
   /*appelez la fonction pour récupérer la valeur de $result*/
-  $result = indexTouteslesCatégories();
+  $result = indexTouteslesCategories();
 
 
-
+  
 //2) Fonction SQL pour index plats les plus vendus
 function indexPlatslesplusVendus(){
 
