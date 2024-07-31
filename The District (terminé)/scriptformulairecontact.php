@@ -12,5 +12,5 @@ fputs($txt, $information_commande);
 
 //Fermeture du fichier
 fclose($txt);
-
+header("location:index.php");
 ?>
