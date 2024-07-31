@@ -139,7 +139,7 @@ $categoryName = platsParCategorieTitre();
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
-//4) Fonctions SQL CORPS plats par catégorie (!!! NE FONCTIONNE PAS POUR LE MOMENT !!!)
+//4) Fonctions SQL CORPS plats par catégorie
 function platsParCategorieCorps()
 {
   $servername = "localhost";
