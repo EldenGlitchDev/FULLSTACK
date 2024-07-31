@@ -9,6 +9,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once 'vendor/autoload.php';
 
+function mailCommande(){
+    
 $mail = new PHPMailer(true);
 
 // On va utiliser le SMTP
@@ -58,5 +60,5 @@ if ($mail){
         echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $mail->ErrorInfo;
         }
     }
-
+}
 ?>
