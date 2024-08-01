@@ -1,5 +1,6 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once ('header.php');
+require_once ('DAO.php');
 ?>
 
 <?php
@@ -9,8 +10,31 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once 'vendor/autoload.php';
 
-function mailCommande(){
+function mailCommande($adresseclient,$mailclient,$totalclient,$quantiteclient,$nomclient,$total){
     
+$datejour=date("d-m-Y");
+$dateheure=date("H:m");
+
+$subject="Objet : Confirmation de votre commande chez The District";
+$txtmail = "Madame, Monsieur ".$nomclient.",<br>
+<br>Nous vous remercions pour votre commande effectuée sur notre site ! Nous sommes ravis de vous informer que votre commande a été reçue et est en cours de préparation.<br>
+<br><b>Détails de la commande :</b>
+
+<br>Nom et prénom du client : Madame, Monsieur ".$nomclient."
+<br>Adresse de livraison : ".$adresseclient."
+<br>Date et heure de la commande : Le ".$datejour." à ".$dateheure."
+<br>Mail du client : ".$mailclient."
+<br>Produits commandés : ".$total."
+<br>Quantité : ".$quantiteclient."
+<br>Total du(des) produit(s) : ".$totalclient." euros.
+
+<p>Nous nous engageons à préparer votre commande avec soin pour garantir votre entière satisfaction. Vous recevrez une notification lorsque votre commande sera prête pourla livraison.<p>
+<p>Si vous avez des questions ou souhaitez apporter des modifications à votre commande, n'hésitez pas à nous contacter au 09/**/**/**/** ou par email à thedistrict@laposte.fr.</p>
+<br>Merci pour votre confiance et à qu'on ne vous revoit plus !
+<br> Cordialement, Monsieur Igor Gonzola.
+<br><b>Les équipes de <b><i>The District</i></b></b>";
+
+
 $mail = new PHPMailer(true);
 
 // On va utiliser le SMTP
@@ -26,7 +50,7 @@ $mail->SMTPAuth   = false;
 $mail->Port       = 1025;                                   
 
 // Expéditeur du mail - adresse mail + nom (facultatif)
-$mail->setFrom('from@thedistrict.com', 'The District Company');
+$mail->setFrom('thedistrict@laposte.fr', 'The District');
 
 // Destinataire(s) - adresse et nom (facultatif)
 $mail->addAddress("client1@example.com", "Mr Client1");
@@ -46,10 +70,10 @@ $mail->isHTML(true);
 $mail->addAttachment('/path/to/file.pdf');*/
 
 // Sujet du mail
-$mail->Subject = 'Test PHPMailer';
+$mail->Subject = $subject;
 
 // Corps du message
-$mail->Body = "On teste l'envoi de mails avec PHPMailer";
+$mail->Body = $txtmail;
 
 // On envoie le mail dans un block try/catch pour capturer les éventuelles erreurs
 if ($mail){
@@ -61,4 +85,5 @@ if ($mail){
         }
     }
 }
+
 ?>

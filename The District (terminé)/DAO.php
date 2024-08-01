@@ -252,7 +252,7 @@ function commandeForeach($result)
         <p class="card-text txtcolor">' . $row['description'] . '</p>
         <p class="card-text txtcolor">Prix :<b> ' . $row['prix'] . ' €</b></p>
         <p class="txtcolor quantite fs-4">Quantité :</p>
-              <input class="input_style barrequantite" type="number" tabindex="5" min="1" max="500" value="1" required>
+              <input class="input_style barrequantite" type="number" tabindex="5" min="1" max="500" value="1" name="quantite" required>
       </div>
     </div>
   </div>

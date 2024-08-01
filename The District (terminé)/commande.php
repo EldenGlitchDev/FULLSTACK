@@ -21,7 +21,7 @@
       <br><br>
 
       <div class="container">
-        <form id="formulaire" action="scriptformulairecommande.php" method="post">
+        <form id="formulaire" action="scriptformulairecommandeMAIL.php" method="post">
           <div class="row">
             <div class="mb-3">
               <label for="NometPrenom" class="form-label coordonneesCSS">Nom et prénom</label>

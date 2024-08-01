@@ -1,4 +1,8 @@
 <?php
+  require_once('header.php')
+?>
+
+<?php
 
 session_start();
 
@@ -13,4 +17,8 @@ fputs($txt, $information_commande);
 //Fermeture du fichier
 fclose($txt);
 header("location:index.php");
+?>
+
+<?php
+  require_once('footer.php')
 ?>
