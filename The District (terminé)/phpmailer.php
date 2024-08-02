@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once 'vendor/autoload.php';
 
-function mailCommande($adresseclient,$mailclient,$totalproduit,$quantiteproduit,$nomclient,$libelle){
+function mailCommande($adresseclient,$mailclient,$totalproduit,$quantiteproduit,$nomclient){
 
     $servername = "localhost";
     $username = "admin";
@@ -35,7 +35,7 @@ function mailCommande($adresseclient,$mailclient,$totalproduit,$quantiteproduit,
     foreach ($result as $plat) { // IL FAUT UTILISER UN $_GET['commMail'] QUELQUE PART SUR CES LIGNES
         $platsCommandes .= $plat['libelle'] . ', ';
     }
-    $platsCommandes = rtrim($platsCommandes, ', '); // Suppression de la virgule finale
+    $platsCommandes = rtrim($platsCommandes, ', '); // Suppression de la virgule finale,  supprime les espaces (ou d'autres caractères) de fin de chaîne
 
 $datejour=date("d-m-Y");
 $dateheure=date("H:i");
