@@ -10,10 +10,35 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once 'vendor/autoload.php';
 
-function mailCommande($adresseclient,$mailclient,$totalclient,$quantiteclient,$nomclient,$total){
-    
+function mailCommande($adresseclient,$mailclient,$totalproduit,$quantiteproduit,$nomclient,$libelle){
+
+    $servername = "localhost";
+    $username = "admin";
+    $password = "Afpa1234";
+    $dbname = "the_district";
+  
+    try {
+      $dbh = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+      echo "Erreur de connexion à la base de données: " . $e->getMessage();
+    }
+    $stmt = $dbh->prepare("SELECT libelle FROM plat");
+    try{
+        $stmt->execute();
+    } catch (PDOException $e) {
+        echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
+    }
+    $result = $stmt->fetchAll();
+    // Création d'une chaîne de caractères pour afficher les libellés des plats commandés
+    $platsCommandes = '';
+    foreach ($result as $plat) { // IL FAUT UTILISER UN $_GET['commMail'] QUELQUE PART SUR CES LIGNES
+        $platsCommandes .= $plat['libelle'] . ', ';
+    }
+    $platsCommandes = rtrim($platsCommandes, ', '); // Suppression de la virgule finale
+
 $datejour=date("d-m-Y");
-$dateheure=date("H:m");
+$dateheure=date("H:i");
 
 $subject="Objet : Confirmation de votre commande chez The District";
 $txtmail = "Madame, Monsieur ".$nomclient.",<br>
@@ -24,13 +49,13 @@ $txtmail = "Madame, Monsieur ".$nomclient.",<br>
 <br>Adresse de livraison : ".$adresseclient."
 <br>Date et heure de la commande : Le ".$datejour." à ".$dateheure."
 <br>Mail du client : ".$mailclient."
-<br>Produits commandés : ".$total."
-<br>Quantité : ".$quantiteclient."
-<br>Total du(des) produit(s) : ".$totalclient." euros.
+<br>Produits commandés : ".$platsCommandes."
+<br>Quantité : ".$quantiteproduit."
+<br>Total du(des) produit(s) : ".$totalproduit." euros.
 
 <p>Nous nous engageons à préparer votre commande avec soin pour garantir votre entière satisfaction. Vous recevrez une notification lorsque votre commande sera prête pourla livraison.<p>
 <p>Si vous avez des questions ou souhaitez apporter des modifications à votre commande, n'hésitez pas à nous contacter au 09/**/**/**/** ou par email à thedistrict@laposte.fr.</p>
-<br>Merci pour votre confiance et à qu'on ne vous revoit plus !
+<br>Merci pour votre confiance et qu'on ne vous revoit plus !
 <br> Cordialement, Monsieur Igor Gonzola.
 <br><b>Les équipes de <b><i>The District</i></b></b>";
 
@@ -53,7 +78,7 @@ $mail->Port       = 1025;
 $mail->setFrom('thedistrict@laposte.fr', 'The District');
 
 // Destinataire(s) - adresse et nom (facultatif)
-$mail->addAddress("client1@example.com", "Mr Client1");
+$mail->addAddress("client1@example.com", "Mr/Mme");
 $mail->addAddress("client2@example.com"); 
 
 //Adresse de reply (facultatif)
