@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require_once 'vendor/autoload.php';
-
-function mailCommande($adresseclient,$mailclient,$totalproduit,$quantiteproduit,$nomclient){
+//mettre la requete pdo dans le script commande avec les prix et libelle
+function mailCommande($adresseclient,$mailclient,$totalproduit,$quantiteproduit,$nomclient,$idplat){
 
     $servername = "localhost";
     $username = "admin";
@@ -23,19 +23,20 @@ function mailCommande($adresseclient,$mailclient,$totalproduit,$quantiteproduit,
     } catch (PDOException $e) {
       echo "Erreur de connexion à la base de données: " . $e->getMessage();
     }
-    $stmt = $dbh->prepare("SELECT libelle FROM plat");
+    $stmt = $dbh->prepare("SELECT libelle FROM plat WHERE id = :id");
+    $stmt->bindParam(':id',$idplat);
     try{
         $stmt->execute();
     } catch (PDOException $e) {
         echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
     }
-    $result = $stmt->fetchAll();
+    $plat = $stmt->fetch();
     // Création d'une chaîne de caractères pour afficher les libellés des plats commandés
-    $platsCommandes = '';
-    foreach ($result as $plat) { // IL FAUT UTILISER UN $_GET['commMail'] QUELQUE PART SUR CES LIGNES
-        $platsCommandes .= $plat['libelle'] . ', ';
-    }
-    $platsCommandes = rtrim($platsCommandes, ', '); // Suppression de la virgule finale,  supprime les espaces (ou d'autres caractères) de fin de chaîne
+    // $platsCommandes = '';
+    // foreach ($result as $plat) { // IL FAUT UTILISER UN $_GET['commMail'] QUELQUE PART SUR CES LIGNES
+        $platsCommandes = $plat['libelle'] ;
+    // }
+    // $platsCommandes = rtrim($platsCommandes, ', '); // Suppression de la virgule finale,  supprime les espaces (ou d'autres caractères) de fin de chaîne
 
 $datejour=date("d-m-Y");
 $dateheure=date("H:i");

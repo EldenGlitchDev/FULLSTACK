@@ -1,5 +1,6 @@
 <?php
-  require_once('header.php')
+  require_once('header.php');
+  $_SESSION['comm'] = $_GET['comm'];
   ?>
   <div class="container">
 

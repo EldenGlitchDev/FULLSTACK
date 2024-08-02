@@ -7,8 +7,8 @@
 $total=$stmt['prix'] * $_REQUEST['quantite']; // peut être problème ici pour le total des produits en euros
 
 $information_commande="\nnom et prénom :".$_REQUEST['NometPrenom'].", email :".$_REQUEST['email'].", téléphone :".$_REQUEST['telephone'].", votre adresse :".$_REQUEST['votreadresse'];
-
-mailCommande($_REQUEST['votreadresse'],$_REQUEST['email'],$total,$_REQUEST['quantite'],$_REQUEST['NometPrenom'],$stmt['libelle']);
+//$stmt['libelle']
+mailCommande($_REQUEST['votreadresse'],$_REQUEST['email'],$total,$_REQUEST['quantite'],$_REQUEST['NometPrenom'],$_SESSION['comm'] );
 
 //Ouverture en écriture seule (impossible d'écrire sur le fichier .txt)
 $txt=fopen("AAAA-MM-JJ-HH-MM-SS.txt", "a");
